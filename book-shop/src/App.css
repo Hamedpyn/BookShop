@@ -8,6 +8,27 @@
     padding: 0;
 }
 
+.active,
+.link-67 {
+    width: 100%;
+    color: #FFF;
+    font-size: 15px;
+    padding: 10px 10px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.active:hover,
+.link-67:hover {
+    opacity: 1;
+    margin-right: 10px;
+}
+
 .wrapper {
     position: fixed;
     top: 0;
@@ -20,12 +41,61 @@
     z-index: 49;
 }
 
+.active::before,
+.active::after {
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+    width: 3px;
+    height: 80%;
+    right: 0;
+    transition: height 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#enFont {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .menuBasis {
     flex-basis: 33.333333%;
     display: flex;
 }
+
+.link-67 {
+    opacity: 0.7;
+}
+
+.subMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.active::after {
+    top: 0;
+}
+
 .iconInsta:hover {
     background: radial-gradient(circle farthest-corner at 35% 100%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 10% 140%, #feda7e, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e42e66 50%, #fa5332 70%, #ffdc80 100%) !important;
+}
+
+
+.collectionSubMenu {
+    transition: all 0.3s;
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 14px;
+    padding: -0px 25px;
+    margin: 0 5px;
+    padding-top: 8px;
+}
+
+.collectionSubMenu:hover {
+    opacity: 1;
+    margin-right: 10px;
 }
 
 }

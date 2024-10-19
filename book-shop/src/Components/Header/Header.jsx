@@ -5,8 +5,16 @@ import { FaUserAlt } from "react-icons/fa";
 import SideBar from "../SideBar/SideBar";
 
 function Header() {
+    const [isCategoryMenuOn, setIsCategoryMenuOn] = useState(false);
+    const [isPagesMenuOn, setIsPagesMenuOn] = useState(false);
     const [isTrue, setIsTrue] = useState(false);
+    const [isCollectionMenuOn, setIsCollectionMenuOn] = useState(false);
     const toggleMenu = (e) => {
+        if (!isTrue) {
+            setIsCollectionMenuOn(false);
+            setIsCategoryMenuOn(false);
+            setIsPagesMenuOn(false);
+        }
         e.stopPropagation();
         setIsTrue((prev) => !prev);
     };
@@ -14,7 +22,13 @@ function Header() {
     const sideBarObject = {
         isTrue,
         setIsTrue,
+        setIsCollectionMenuOn,
+        setIsCategoryMenuOn,
+        isCategoryMenuOn,
+        isCollectionMenuOn,
         toggleMenu,
+        isPagesMenuOn,
+        setIsPagesMenuOn,
     };
 
     return (

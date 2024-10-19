@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 import LinkIcons from "../linkIcons/LinkIcons"
 export default function SideBar(sideBarObject) {
+    const [subMenuDetails,] = useState(subMenuDetail);
     let wrapperRef = useRef();
     const [, setWidth] = useState(window.innerWidth);
     let bodyRef = useRef(null);
@@ -40,6 +43,57 @@ export default function SideBar(sideBarObject) {
         <>
             <div className={`z-50 fixed top-0 right-0 transition-all ease-out duration-300 h-full w-[270px] sm:w-[350px] bg-current overflow-auto overflow-x-hidden lg:invisible lg:opacity-0 ${sideBarObject.isTrue ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}`}
                 onClick={e => e.stopPropagation()}>
+                <div className="mx-2 mt-5">
+                    <div className="flex flex-wrap justify-between flex-row-reverse rounded p-3 bg-white">
+                        <IoMdClose onClick={sideBarObject.toggleMenu} className="menuButton border transition-all hover:scale-110" />
+                        <img src="/Images/logo.png" className="w-[120px]" alt="Logo" />
+                    </div>
+                    <ul className="text-white flex flex-col mt-7 mb-20">
+                        <li className="mr-[-1px]">
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) => (isActive ? "active" : "link-67")}
+                            >
+                                صفحه اصلی
+                            </NavLink>
+                        </li>
+                        <li className="mr-[-1px]">
+                            <NavLink
+                                to="/books"
+                                className={({ isActive }) => (isActive ? "active" : "link-67")}
+                            >
+                                کتاب ها
+                            </NavLink>
+                        </li>
+                        <li onClick={() => sideBarObject.setIsCollectionMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isCollectionMenuOn && "opacity-100"}`}>
+                            <span className="subMenu">
+                                <span>مجموعه</span>
+                                <FaChevronDown className={`transition-all ${sideBarObject.isCollectionMenuOn ? "transform rotate-180" : ""}`} />
+                            </span>
+                        </li>
+
+                        <li onClick={() => sideBarObject.setIsCategoryMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isCategoryMenuOn && "opacity-100"}`}>
+                            <span className="subMenu">
+                                <span>دسته بندی</span>
+                                <FaChevronDown className={`transition-all ${sideBarObject.isCategoryMenuOn ? "transform rotate-180" : ""}`} />
+                            </span>
+                        </li>
+
+                        <li onClick={() => sideBarObject.setIsPagesMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isPagesMenuOn && "opacity-100"}`}>
+                            <span className="subMenu">
+                                <span>صفحات</span>
+                                <FaChevronDown className={`transition-all ${sideBarObject.isPagesMenuOn ? "transform rotate-180" : ""}`} />
+                            </span>
+                        </li>
+
+
+                        <li className="link-67">
+                            <span>تماس با ما</span>
+                        </li>
+                        <Button className="md:hidden rounded mt-5" color="light">
+                            ورود / ثبت نام
+                        </Button>
+                    </ul>
                     <div className="flex flex-col items-center justify-center gap-3">
                         <LinkIcons />
                     </div>
