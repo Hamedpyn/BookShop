@@ -164,6 +164,17 @@ export default function SideBar(sideBarObject) {
                                     <span>-منوی کشویی</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.subMenu ? "transform rotate-180" : ""}`} />
                                 </span>
+                                <SideBarSubMenu isSubMenuOn={sideBarObject.subMenu}>
+                                    <div className={`flex flex-col mt-[-10px]`}>
+                                        <span className="collectionSubMenu px-11"
+                                        >-زیر منو 1</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-زیر منو 2</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-زیر منو 3</span>
+                                        
+                                    </div>
+                                </SideBarSubMenu>
                             </div>
                         </SideBarSubMenu>
 
