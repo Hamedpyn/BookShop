@@ -106,4 +106,40 @@
     margin-right: 10px;
 }
 
+
+.isActive {
+    color: #758BFD;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.isActive::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 8px;
+    background-color: #758BFD;
+    bottom: 0;
+    left: 20%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.underEffect::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 8px;
+    background-color: #758BFD;
+    bottom: 0;
+    left: 20%;
+    border-radius: 20px 20px 0px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+}
+
+.underEffect:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
 }
