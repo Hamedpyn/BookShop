@@ -90,6 +90,21 @@ export default function NavBar() {
             <FaChevronDown className="group-hover:rotate-180 transition-all" />
           </span>
         </a>
+        <ul className={`transition-opacity ease-out absolute top-[135px] right-0 w-[200px] h-[150px] group-hover:visible group-hover:opacity-100 invisible opacity-0 cursor-auto rounded-md bg-current z-50 text-sm gap-2 flex pt-5 flex-col text-white delay-100 duration-200 px-10`}>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">وبلاگ</li>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">درباره ما</li>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">سوالات متداول</li>
+          <li className="cursor-pointer flex items-center opacity-70 hover:opacity-100 relative transition-all w-[200px] underMenuCollect gap-4">
+            <span>منوی کشویی</span>
+            <span>
+              <FaChevronDown className="transition-all underCheck" />
+            </span>
+            <ul className={`transition-opacity ease-out absolute top-0 right-[160px] w-[150px] h-[110px] cursor-auto rounded-md bg-current text-sm gap-2 flex pt-5 flex-col text-white delay-100 invisible opacity-0 subMenuCollect duration-200 px-5`}>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو 1</li>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو 2</li>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو3</li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li className="relative py-[58px] ">
