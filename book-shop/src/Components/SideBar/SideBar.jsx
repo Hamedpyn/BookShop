@@ -98,10 +98,48 @@ export default function SideBar(sideBarObject) {
                                     <span>-مجموعه جذاب</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.interestingCollection ? "transform rotate-180" : ""}`} />
                                 </span>
+                                <SideBarSubMenu isSubMenuOn={sideBarObject.interestingCollection}>
+                                    <div className={`flex flex-col mt-[-10px] mb-5`}>
+                                        <span className="collectionSubMenu px-11"
+                                        >-ماجراجویی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-رمان</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-کمدی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-فانتزی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-تاریخی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-جنایی</span>
+                                    </div>
+                                </SideBarSubMenu>
+
                                 <span onClick={() => sideBarObject.setFreeCollection(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.freeCollection && "opacity-100"}`} >
                                     <span>-مجموعه رایگان</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.freeCollection ? "transform rotate-180" : ""}`} />
                                 </span>
+                                <SideBarSubMenu isSubMenuOn={sideBarObject.freeCollection}>
+                                    <div className={`flex flex-col mt-[-10px]`}>
+                                        <span className="collectionSubMenu px-11"
+                                        >-ستاره شناسی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-جئوگرافی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-ورزشی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-تاریخی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-ادبیات داستانی</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-اقتصاد</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-کلاسیک</span>
+                                        <span className="collectionSubMenu px-11"
+                                        >-بیوگرافی</span>
+                                    </div>
+                                </SideBarSubMenu>
+                            </div>
                         </SideBarSubMenu>
 
                         <li onClick={() => sideBarObject.setIsPagesMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isPagesMenuOn && "opacity-100"}`}>
