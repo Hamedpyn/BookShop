@@ -90,6 +90,9 @@
     background: radial-gradient(circle farthest-corner at 35% 100%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 10% 140%, #feda7e, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e42e66 50%, #fa5332 70%, #ffdc80 100%) !important;
 }
 
+.subOrgMenu>span {
+    transition: all 150ms;
+}
 
 .collectionSubMenu {
     transition: all 0.3s;
@@ -106,6 +109,87 @@
     margin-right: 10px;
 }
 
+@media (min-width: 1054px) {
+    .navbar-space {
+        margin-left: 30px !important;
+    }
+}
+
+@media (min-width: 1110px) {
+    .navbar-space {
+        width: 620px !important;
+    }
+}
+
+@media (min-width: 1160px) {
+    .navbar-space {
+        width: 680px !important;
+        padding-right: 40px !important;
+    }
+
+    .navbar-logo {
+        padding-right: 40px !important;
+    }
+
+    .basket {
+        width: 230px !important;
+    }
+    #fontF {
+        left: 175px !important;
+    }
+}
+
+
+@media (min-width: 1240px) {
+    .navbar-space {
+        width: 730px !important;
+    }
+
+    .navbar-menu>li>a {
+        padding: 0 15px !important;
+    }
+
+    .collectionMenu {
+        width: 400px !important;
+        height: 290px !important;
+    }
+
+    .collectionMenu>li>span {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar-space {
+        width: 770px !important;
+    }
+
+}
+
+@media (min-width: 1340px) {
+    .navbar-space {
+        width: 800px !important;
+    }
+
+    .navbar-menu>li>a {
+        padding: 0 20px !important;
+    }
+}
+
+@media (min-width: 1420px) {
+    .navbar-logo {
+        padding-right: 130px !important;
+    }
+
+    .mainHomePage {
+        padding-right: 130px !important;
+    }
+
+    .collectionMenu {
+        width: 420px !important;
+        height: 300px !important;
+    }
+}
 
 .isActive {
     color: #758BFD;
@@ -142,4 +226,45 @@
     visibility: visible;
     opacity: 1;
 }
+
+.underMenuCollect:hover .underCheck {
+    rotate: 90deg;
+}
+
+.underMenuCollect:hover .subMenuCollect {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mainHome::after {
+    content: "";
+    position: absolute;
+    background-color: #758BFD;
+    width: 80%;
+    height: 80%;
+    bottom: 0;
+    border-radius: 70px;
+    rotate: 70deg;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .mainHome::after {
+        height: 400px !important;
+        width: 400px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainHome::after {
+        height: 350px !important;
+        width: 350px !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .mainHome::after {
+        height: 500px !important;
+        width: 500px !important;
+    }
 }
