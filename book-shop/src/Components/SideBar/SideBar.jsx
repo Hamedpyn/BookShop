@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import LinkIcons from "../linkIcons/LinkIcons"
+import SideBarSubMenu from "../SideBarSubMenu/SideBarSubMenu";
+import { FaChevronDown } from "react-icons/fa6";
+import { subMenuDetail } from "../../datas/subMenuDetails";
+
 export default function SideBar(sideBarObject) {
     const [subMenuDetails,] = useState(subMenuDetail);
     let wrapperRef = useRef();
@@ -71,6 +75,14 @@ export default function SideBar(sideBarObject) {
                                 <FaChevronDown className={`transition-all ${sideBarObject.isCollectionMenuOn ? "transform rotate-180" : ""}`} />
                             </span>
                         </li>
+                        <SideBarSubMenu isSubMenuOn={sideBarObject.isCollectionMenuOn}>
+                            {subMenuDetails.map(item => (
+                                <a key={item.id} className="flex justify-center items-center flex-col opacity-70 mb-10 transition-all hover:opacity-100" href="#">
+                                    <img className="w-4/5 sm:w-3/4 rounded" src={item.img} alt={item.img} />
+                                    <Button className={`mt-[-20px] ${item.btnColor && "bg-[#b2824c]"}`} color={item.btnType} pill>{item.title}</Button>
+                                </a>
+                            ))}
+                        </SideBarSubMenu>
 
                         <li onClick={() => sideBarObject.setIsCategoryMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isCategoryMenuOn && "opacity-100"}`}>
                             <span className="subMenu">
