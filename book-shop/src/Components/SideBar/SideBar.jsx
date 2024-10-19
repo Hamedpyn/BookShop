@@ -92,6 +92,18 @@ export default function SideBar(sideBarObject) {
                             </span>
                         </li>
 
+                        <SideBarSubMenu isSubMenuOn={sideBarObject.isCategoryMenuOn}>
+                            <div className="flex flex-col mt-[-25px] mb-5">
+                                <span onClick={() => sideBarObject.setInterestingCollection(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.interestingCollection && "opacity-100"}`}>
+                                    <span>-مجموعه جذاب</span>
+                                    <FaChevronDown className={`transition-all ${sideBarObject.interestingCollection ? "transform rotate-180" : ""}`} />
+                                </span>
+                                <span onClick={() => sideBarObject.setFreeCollection(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.freeCollection && "opacity-100"}`} >
+                                    <span>-مجموعه رایگان</span>
+                                    <FaChevronDown className={`transition-all ${sideBarObject.freeCollection ? "transform rotate-180" : ""}`} />
+                                </span>
+                        </SideBarSubMenu>
+
                         <li onClick={() => sideBarObject.setIsPagesMenuOn(prev => !prev)} className={`link-67 ${sideBarObject.isPagesMenuOn && "opacity-100"}`}>
                             <span className="subMenu">
                                 <span>صفحات</span>
