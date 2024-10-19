@@ -11,4 +11,9 @@ module.exports = {
     // ...
     flowbite.plugin(),
   ],
+  theme: {
+    colors: {
+      current:"#758bfd"
+    }
+  }
 };
