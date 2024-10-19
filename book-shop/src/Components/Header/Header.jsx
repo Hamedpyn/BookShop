@@ -3,6 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { FaBasketShopping } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
 import SideBar from "../SideBar/SideBar";
+import NavBar from "../NavBar/NavBar";
 
 function Header() {
     const [isCategoryMenuOn, setIsCategoryMenuOn] = useState(false);
@@ -54,6 +55,9 @@ function Header() {
                     <div className="menuBasis justify-center md:justify-start lg:basis-auto lg:justify-start lg:bg-white lg:h-[140px] pr-5 xl:pr-12 items-center navbar-logo z-50 lg:border-[0.5px] border-[rgba(149, 157, 165, 0.2)] lg:border-l-0"
                     >
                         <img src="/Images/logo.png" className="w-[120px] lg:h-[60px] md:w-[140px]" alt="Logo" />
+                    </div>
+                    <div className="hidden lg:flex bg-white h-[140px]  rounded-bl-[80px] w-[630px] xl:!pr-12 pr-5 items-center text-[#686868] navbar-space border-[rgba(149, 157, 165, 0.2)] border-[1px] border-r-0">
+                        <NavBar />
                     </div>
                     <div className="menuBasis md:relative justify-end items-center gap-4 relative lg:basis-auto lg:h-[140px] lg:mr-3 lg:justify-center lg:w-[200px] basket xl:mr-10">
                         <FaBasketShopping className="menuButton bg-[#f8f8fa] text-gray-700 border border-gray-300" />
