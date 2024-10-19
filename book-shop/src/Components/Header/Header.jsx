@@ -2,11 +2,19 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { FaBasketShopping } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
+import SideBar from "../SideBar/SideBar";
+
 function Header() {
     const [isTrue, setIsTrue] = useState(false);
     const toggleMenu = (e) => {
         e.stopPropagation();
         setIsTrue((prev) => !prev);
+    };
+
+    const sideBarObject = {
+        isTrue,
+        setIsTrue,
+        toggleMenu,
     };
 
     return (
@@ -32,6 +40,7 @@ function Header() {
                 </div>
             </div>
 
+            <SideBar {...sideBarObject} />
         </>
     );
 }
