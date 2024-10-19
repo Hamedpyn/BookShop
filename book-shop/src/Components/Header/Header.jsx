@@ -9,11 +9,18 @@ function Header() {
     const [isPagesMenuOn, setIsPagesMenuOn] = useState(false);
     const [isTrue, setIsTrue] = useState(false);
     const [isCollectionMenuOn, setIsCollectionMenuOn] = useState(false);
+    const [interestingCollection, setInterestingCollection] = useState(false)
+    const [freeCollection, setFreeCollection] = useState(false)
+    const [subMenu, setSubMenu] = useState(false)
+
     const toggleMenu = (e) => {
         if (!isTrue) {
             setIsCollectionMenuOn(false);
             setIsCategoryMenuOn(false);
             setIsPagesMenuOn(false);
+            setInterestingCollection(false)
+            setFreeCollection(false)
+            setSubMenu(false)
         }
         e.stopPropagation();
         setIsTrue((prev) => !prev);

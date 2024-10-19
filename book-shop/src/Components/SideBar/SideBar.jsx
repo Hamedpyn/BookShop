@@ -149,6 +149,23 @@ export default function SideBar(sideBarObject) {
                             </span>
                         </li>
 
+                        <SideBarSubMenu isSubMenuOn={sideBarObject.isPagesMenuOn}>
+                            <div className="flex flex-col mt-[-25px] mb-5">
+                                <span className={`collectionSubMenu subMenu`} >
+                                    <span>-وبلاگ</span>
+                                </span>
+                                <span className={`collectionSubMenu subMenu`} >
+                                    <span>-درباره ما</span>
+                                </span>
+                                <span className={`collectionSubMenu subMenu`} >
+                                    <span>-سوالات متداول</span>
+                                </span>
+                                <span onClick={() => sideBarObject.setSubMenu(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.subMenu && "opacity-100"}`} >
+                                    <span>-منوی کشویی</span>
+                                    <FaChevronDown className={`transition-all ${sideBarObject.subMenu ? "transform rotate-180" : ""}`} />
+                                </span>
+                            </div>
+                        </SideBarSubMenu>
 
                         <li className="link-67">
                             <span>تماس با ما</span>
