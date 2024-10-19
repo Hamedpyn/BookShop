@@ -42,6 +42,46 @@ export default function NavBar() {
           </span>
         </a>
 
+        <ul className={`transition-opacity ease-out absolute top-[135px] right-0 w-[350px] group-hover:visible group-hover:opacity-100 invisible opacity-0 collectionMenu h-[280px] rounded-md bg-current z-50 group flex pt-5 text-white delay-100 duration-200 px-10`}>
+          <li className="basis-1/2 flex flex-col items-start ml-10">
+            <span>مجموعه جذاب</span>
+            <div className={`subOrgMenu flex flex-col gap-2 pt-2`}>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-ماجراجویی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-رمان</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-کمدی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-فانتزی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-تاریخی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-جنایی</span>
+            </div>
+          </li>
+          <li className="basis-1/2 flex flex-col items-start">
+            <span>مجموعه رایگان</span>
+            <div className={`subOrgMenu flex flex-col gap-2 pt-2`}>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-ستاره شناسی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-جئوگرافی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-ورزشی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-تاریخی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-ادبیات داستانی</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-اقتصاد</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-کلاسیک</span>
+              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
+              >-بیوگرافی</span>
+            </div>
+          </li>
+        </ul>
       </li>
       <li className="py-[62px] relative group">
         <a className="cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
