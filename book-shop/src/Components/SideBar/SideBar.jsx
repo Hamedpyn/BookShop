@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import LinkIcons from "../linkIcons/LinkIcons"
 export default function SideBar(sideBarObject) {
     let wrapperRef = useRef();
     const [, setWidth] = useState(window.innerWidth);
@@ -39,6 +40,10 @@ export default function SideBar(sideBarObject) {
         <>
             <div className={`z-50 fixed top-0 right-0 transition-all ease-out duration-300 h-full w-[270px] sm:w-[350px] bg-current overflow-auto overflow-x-hidden lg:invisible lg:opacity-0 ${sideBarObject.isTrue ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}`}
                 onClick={e => e.stopPropagation()}>
+                    <div className="flex flex-col items-center justify-center gap-3">
+                        <LinkIcons />
+                    </div>
+                </div>
             </div>
             <div ref={wrapperRef} className="lg:hidden"></div>
         </>
