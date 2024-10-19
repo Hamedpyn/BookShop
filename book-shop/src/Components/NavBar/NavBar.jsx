@@ -1,5 +1,10 @@
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa6";
+import { subMenuDetail } from "../../datas/subMenuDetails";
+import { Button } from "flowbite-react";
+
 export default function NavBar() {
+  const [subMenuDetails,] = useState(subMenuDetail)
   return (
     <ul className="flex navbar-menu h-full items-center">
       <li className="relative py-[62px] ">
@@ -20,6 +25,14 @@ export default function NavBar() {
           </span>
         </a>
 
+        <ul className={`transition-opacity ease-out absolute top-[130px] right-[-200px] group-hover:visible group-hover:opacity-100 invisible opacity-0  w-[800px] xl:h-[300px] xl:w-[1000px] h-[200px] xl:right-[-300px] bg-white flex items-center justify-center z-50`}>
+          {subMenuDetails.map(item => (
+            <a key={item.id} className=" flex flex-col items-center transition-all" href="#">
+              <img className="w-[200px] xl:w-[300px] rounded" src={item.img} alt={item.img} />
+              <Button className={`mt-[-20px] ${item.btnColor && "bg-[#b2824c]"}`} color={item.btnType} pill>{item.title}</Button>
+            </a>
+          ))}
+        </ul>
       </li>
       <li className="py-[62px] relative group">
         <a className="cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
