@@ -36,6 +36,12 @@ function Header() {
         toggleMenu,
         isPagesMenuOn,
         setIsPagesMenuOn,
+        interestingCollection,
+        setInterestingCollection,
+        freeCollection,
+        setFreeCollection,
+        subMenu,
+        setSubMenu
     };
 
     return (
