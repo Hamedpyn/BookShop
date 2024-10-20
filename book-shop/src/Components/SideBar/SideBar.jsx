@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import LinkIcons from "../linkIcons/LinkIcons"
 import SideBarSubMenu from "../SideBarSubMenu/SideBarSubMenu";
 import { FaChevronDown } from "react-icons/fa6";
-import { subMenuDetail } from "../../datas/subMenuDetails";
+import { subMenuDetail } from "../datas/subMenuDetails";
 
 export default function SideBar(sideBarObject) {
     const [subMenuDetails,] = useState(subMenuDetail);
