@@ -134,6 +134,7 @@
     .basket {
         width: 230px !important;
     }
+
     #fontF {
         left: 175px !important;
     }
@@ -266,5 +267,25 @@
     .mainHome::after {
         height: 500px !important;
         width: 500px !important;
+    }
+}
+
+.titleBorder {
+    height: 1px;
+    width: 120px;
+    background-color: #D8D6D6;
+}
+
+@media (max-width: 380px) {
+    .titleBorder {
+        width: 60px;
+    }
+}
+@media (max-width: 768px) {
+    .titleBorder {
+        width: 60px;
+    }
+    .classic {
+        flex-grow: 1 !important;
     }
 }
