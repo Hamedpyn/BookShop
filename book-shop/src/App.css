@@ -7,7 +7,10 @@
     margin: 0;
     padding: 0;
 }
-
+@font-face {
+    font-family: yekan;
+    src: url(/public/fonts/Yekan.ttf);
+}
 .active,
 .link-67 {
     width: 100%;
@@ -288,4 +291,8 @@
     .classic {
         flex-grow: 1 !important;
     }
+}
+
+.fontF {
+    font-family: yekan;
 }
