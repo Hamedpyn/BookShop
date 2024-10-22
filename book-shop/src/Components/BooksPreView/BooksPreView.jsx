@@ -1,7 +1,9 @@
 import { useState } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
+import { bookPreView } from "../datas/Datas";
 
 export default function BooksPreView() {
+    const [books,] = useState(bookPreView)
     return (
         <div className="mt-20 mb-20">
             <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1600 172">
