@@ -7,6 +7,19 @@
     margin: 0;
     padding: 0;
 }
+
+.swiper {
+    width: 100% !important;
+}
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+.swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1.1) !important; /* Enlarge the active slide */
+    transition: transform 0.3s ease !important;
+}
 @font-face {
     font-family: yekan;
     src: url(/public/fonts/Yekan.ttf);
@@ -336,13 +349,3 @@
 .fontF {
     font-family: yekan;
 }
-
-/* .customBg::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: #000;
-    height: 200px;
-    width: 100%;
-    border-radius: 40% 40% 0 0;
-} */
