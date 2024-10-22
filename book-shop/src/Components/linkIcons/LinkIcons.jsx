@@ -29,7 +29,7 @@ export default function LinkIcons() {
                 ))}
             </div>
             <div>
-                <span className="text-white">توسعه شده توسط <span id="enFont">HAMEDPYN</span></span>
+                <span className="text-white word">توسعه شده توسط <span id="enFont">HAMEDPYN</span></span>
             </div>
         </>
     );

@@ -8,18 +8,18 @@ export default function NavBar() {
   const [subMenuDetails,] = useState(subMenuDetail)
   return (
     <ul className="flex navbar-menu h-full items-center">
-      <li className="relative py-[62px] ">
-        <NavLink to={"/"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
+      <li className="relative py-[62px] group cursor-pointer underEffect">
+        <NavLink to={"/"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
           صفحه اصلی
         </NavLink>
       </li>
-      <li className="relative py-[62px] ">
-        <NavLink to={"/books"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
+      <li className="relative py-[62px] group underEffect cursor-pointer">
+        <NavLink to={"/books"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
           کتاب ها
         </NavLink>
       </li>
-      <li className="py-[62px] group relative  group">
-        <a className="underEffect border-l-2 h-4 flex items-center cursor-pointer hover:text-current transition-all border-[#f6f7f9] px-2 gap-1">
+      <li className="py-[62px] group underEffect relative cursor-pointer">
+        <a className=" border-l-2 h-4 flex items-center cursor-pointer group-hover:text-current transition-all border-[#f6f7f9] px-2 gap-1">
           <span>مجموعه</span>
           <span>
             <FaChevronDown className="group-hover:rotate-180 transition-all" />
@@ -35,8 +35,8 @@ export default function NavBar() {
           ))}
         </ul>
       </li>
-      <li className="py-[62px] relative group">
-        <a className="cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
+      <li className="py-[62px] relative underEffect group cursor-pointer">
+        <a className="cursor-pointer group-hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
           <span>دسته بندی</span>
           <span>
             <FaChevronDown className="group-hover:rotate-180 transition-all" />
@@ -84,8 +84,8 @@ export default function NavBar() {
           </li>
         </ul>
       </li>
-      <li className="py-[62px] relative group">
-        <a className="cursor-pointer hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
+      <li className="py-[62px] relative underEffect group cursor-pointer">
+        <a className="cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
           <span>صفحات</span>
           <span>
             <FaChevronDown className="group-hover:rotate-180 transition-all" />
@@ -108,8 +108,8 @@ export default function NavBar() {
           </li>
         </ul>
       </li>
-      <li className="relative py-[58px] ">
-        <NavLink to={"/contact-us"} className={({ isActive }) => (isActive ? "isActive px-2" : "cursor-pointer hover:text-current transition-all underEffect px-2")}>
+      <li className="relative py-[58px] group cursor-pointer underEffect">
+        <NavLink to={"/contact-us"} className={({ isActive }) => (isActive ? "isActive px-2" : "cursor-pointer group-hover:text-current transition-all px-2")}>
           تماس با ما
         </NavLink>
       </li>

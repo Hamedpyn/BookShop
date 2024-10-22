@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: bold;
     user-select: none;
     margin: 0;
     padding: 0;
@@ -11,6 +11,43 @@
     font-family: yekan;
     src: url(/public/fonts/Yekan.ttf);
 }
+@font-face {
+    font-family: word;
+    src: url(/public/fonts/bbd8448e056821340fd2bbf64eba980a.ttf);
+}
+@font-face {
+    font-family: wordBold;
+    src: url(/public/fonts/KALAMEHBOLD.TTF);
+}
+@font-face {
+    font-family: regular;
+    src: url(/public/fonts/KalamehRegular.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(/public/fonts/bold.ttf);
+}
+@font-face {
+    font-family: light;
+    src: url(/public/fonts/IRANSansWebight.ttf);
+}
+
+.word {
+    font-family: word !important;
+}
+.kalameh {
+    font-family: wordBold !important;
+}
+.light {
+    font-family: light !important;
+}
+.sansBold {
+    font-family: bold;
+}
+.regular {
+    font-family: regular !important;
+}
+
 .active,
 .link-67 {
     width: 100%;
@@ -24,6 +61,7 @@
     cursor: pointer;
     opacity: 1;
     transition: all 0.3s;
+    font-family: bold;
 }
 
 .active:hover,
@@ -122,6 +160,7 @@
     .navbar-space {
         width: 620px !important;
     }
+
 }
 
 @media (min-width: 1160px) {
@@ -138,9 +177,13 @@
         width: 230px !important;
     }
 
-    #fontF {
+    .fontF {
         left: 175px !important;
     }
+    .signIn {
+        font-size: 16px !important;
+    }
+    
 }
 
 
@@ -208,7 +251,7 @@
     height: 8px;
     background-color: #758BFD;
     bottom: 0;
-    left: 20%;
+    left: 15%;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -219,7 +262,7 @@
     height: 8px;
     background-color: #758BFD;
     bottom: 0;
-    left: 20%;
+    left: 15%;
     border-radius: 20px 20px 0px 0px;
     visibility: hidden;
     opacity: 0;
@@ -275,7 +318,7 @@
 
 .titleBorder {
     height: 1px;
-    width: 120px;
+    width: 190px;
     background-color: #D8D6D6;
 }
 
@@ -288,11 +331,18 @@
     .titleBorder {
         width: 60px;
     }
-    .classic {
-        flex-grow: 1 !important;
-    }
 }
 
 .fontF {
     font-family: yekan;
 }
+
+/* .customBg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    height: 200px;
+    width: 100%;
+    border-radius: 40% 40% 0 0;
+} */
