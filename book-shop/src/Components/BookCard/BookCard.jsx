@@ -24,7 +24,7 @@ export default function BookCard(props) {
             </NavLink>
                 <div className="bg-current absolute bottom-[-22px] sm:bottom-[-25px] sm:px-7 flex px-10 py-3 sm:py-2 text-lg justify-center gap-2 rounded-full text-white cursor-pointer hover:bg-black items-center transition-all">
                     <RiShoppingCartLine className="w-6 h-6" />
-                    <span>افزودن به سبد خرید</span>
+                    <span className="regular text-xl">افزودن به سبد خرید</span>
                 </div>
         </div>
     )
