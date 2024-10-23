@@ -1,3 +1,4 @@
+import AuthorsInfos from "../../Components/AuthorsInfos/AuthorsInfos";
 import BooksPreView from "../../Components/BooksPreView/BooksPreView";
 import Collection from "../../Components/Collection/Collection";
 import CustomersSlider from "../../Components/CustomersSlider/CustomersSlider";
@@ -12,6 +13,7 @@ export default function Home() {
       <BooksPreView />
       <CustomersSlider />
       <SpecialDiscount />
+      <AuthorsInfos />
     </>
   )
 }
