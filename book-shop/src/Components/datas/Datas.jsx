@@ -34,4 +34,10 @@ const authorsDetails = [
     { id: 4, title: "آدام گرین",job:"روانشناس", img: "/Images/team-member-1.jpg"},
 ]
 
-export { subMenuDetail, bookPreView, usersComments, authorsDetails }
+const footerSubMenu = [
+    {id:1,title:"منو سفارشی",firstSubMenu:"صفحه اصلی",secSubMenu:'کتاب ها',thirdSubMenu:"محموعه",forthSubMenu:"دسته بندی"},
+    {id:2,title:"پشتیبانی",firstSubMenu:"سوالات متداول",secSubMenu:'قوانین',thirdSubMenu:"سیاست ها و قوانین",forthSubMenu:"گزارش"},
+    {id:3,title:"درباره ما",firstSubMenu:"درباره ما",secSubMenu:'شرکا',thirdSubMenu:"چشم انداز",forthSubMenu:"تماس با ما"},
+]
+
+export { subMenuDetail, bookPreView, usersComments, authorsDetails,footerSubMenu }
