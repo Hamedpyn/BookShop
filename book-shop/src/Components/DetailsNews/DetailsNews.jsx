@@ -4,7 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export default function DetailsNews({ tag,isTrue, Title }) {
     return (
-        <div className={`flex bg-[#465392] z-50 rounded-[40px] flex-col gap-10 w-11/12 items-center justify-center max-w-[1300px] ${isTrue ? "bg-image pt-20" : "bg-current py-14 gap-14"}`}>
+        <div className={`flex bg-[#465392] z-50 rounded-[40px] flex-col gap-10 w-11/12 items-center justify-center max-w-[1270px] ${isTrue ? "bg-image pt-20" : "bg-current py-14 gap-14"}`}>
 
             <button className={`regular cursor-auto text-white py-2 px-5 rounded-full text-[16px] ${isTrue ? "bg-current" : "bg-[#27187E]"}`}>{tag}</button>
             <h2 className="kalameh w-[71%] line text-center leading-tight text-white text-6xl">
@@ -26,7 +26,7 @@ export default function DetailsNews({ tag,isTrue, Title }) {
                 </>
             ) : (
                 <div className="flex flex-col-reverse items-center joinInput w-2/4 rounded-full gap-2">
-                    <button className="flex flex-row-reverse items-center gap-2 text-white bg-current transition-all hover:bg-black hover:border-0 rounded-full py-1 px-2 ml-[1px] my-[1px] text-lg regular border">
+                    <button className="flex flex-row-reverse items-center gap-2 text-white bg-current transition-all hover:bg-black rounded-full py-1 px-2 ml-[1px] my-[1px] text-lg regular hover:border-transparent border sm:border-0">
                         عضویت
                         <MdOutlineEmail />
                     </button>
