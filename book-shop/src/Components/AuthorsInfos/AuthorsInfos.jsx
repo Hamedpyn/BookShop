@@ -60,7 +60,7 @@ export default function AuthorsInfos() {
             </div>
             
             <div className="flex flex-col items-center gap-3">
-              <span className="text-black kalameh text-3xl">{author.title}</span>
+              <span className="text-black kalameh text-4xl">{author.title}</span>
               <span className="text-[#B5B5B5]">{author.job}</span>
             </div>
           </div>

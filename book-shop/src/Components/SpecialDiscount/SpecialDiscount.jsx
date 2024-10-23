@@ -6,6 +6,7 @@ export default function SpecialDiscount() {
             <DetailsNews
                 Title={"۲۰ درصد تخفیف ویژه برای اولین خرید شما!"}
                 isTrue={true}
+                tag="تخفیف ویژه"
             />
         </div>
     )

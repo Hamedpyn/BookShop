@@ -11,35 +11,44 @@
 .swiper {
     width: 100% !important;
 }
+
 .swiper-wrapper {
     display: flex;
     align-items: center;
 }
+
 .swiper-slide-active {
     opacity: 1 !important;
-    transform: scale(1.1) !important; /* Enlarge the active slide */
+    transform: scale(1.1) !important;
+    /* Enlarge the active slide */
     transition: transform 0.3s ease !important;
 }
+
 @font-face {
     font-family: yekan;
     src: url(/public/fonts/Yekan.ttf);
 }
+
 @font-face {
     font-family: word;
     src: url(/public/fonts/bbd8448e056821340fd2bbf64eba980a.ttf);
 }
+
 @font-face {
     font-family: wordBold;
     src: url(/public/fonts/KALAMEHBOLD.TTF);
 }
+
 @font-face {
     font-family: regular;
     src: url(/public/fonts/KalamehRegular.ttf);
 }
+
 @font-face {
     font-family: bold;
     src: url(/public/fonts/bold.ttf);
 }
+
 @font-face {
     font-family: light;
     src: url(/public/fonts/IRANSansWebight.ttf);
@@ -48,15 +57,19 @@
 .word {
     font-family: word !important;
 }
+
 .kalameh {
     font-family: wordBold !important;
 }
+
 .light {
     font-family: light !important;
 }
+
 .sansBold {
     font-family: bold;
 }
+
 .regular {
     font-family: regular !important;
 }
@@ -193,10 +206,11 @@
     .fontF {
         left: 175px !important;
     }
+
     .signIn {
         font-size: 16px !important;
     }
-    
+
 }
 
 
@@ -340,6 +354,26 @@
         width: 60px;
     }
 }
+
+@media (min-width: 500px) {
+    .joinInput {
+        flex-direction: row-reverse !important;
+        border: 1px solid #fff !important;
+        gap: 0px !important;
+        background-color: white !important;
+    }
+
+    .joinInput>button {
+        padding: 10px 10px !important;
+    }
+}
+@media (min-width: 768px) {
+
+    .joinInput>button {
+        padding: 15px 20px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .titleBorder {
         width: 60px;
