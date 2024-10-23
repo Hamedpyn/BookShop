@@ -27,4 +27,11 @@ const usersComments = [
     { id: 8, title: "“بهترین. واقعاً خوب. ای کاش اول به آن فکر می کردم. فروشگاه اکسترا را به شما هم پیشنهاد می کنم.”", img: "/Images/testimonial-1.png", userName: "دانیال رستمی", userJob: "مدیر کسب و کار" },
 ]
 
-export { subMenuDetail, bookPreView, usersComments }
+const authorsDetails = [
+    { id: 1, title: "ساناز بهرامی",job:"نویسنده ایرانی", img: "/Images/team-4.jpg" },
+    { id: 2, title: "جیمز جان",job:"روانشناس", img: "/Images/team-3.jpg" },
+    { id: 3, title: "مایک براون",job:"نویسنده برزیلی", img: "/Images/team-2.jpg" },
+    { id: 4, title: "آدام گرین",job:"روانشناس", img: "/Images/team-member-1.jpg"},
+]
+
+export { subMenuDetail, bookPreView, usersComments, authorsDetails }
