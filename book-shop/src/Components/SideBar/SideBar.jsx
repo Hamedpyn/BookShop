@@ -186,7 +186,7 @@ export default function SideBar(sideBarObject) {
                         </Button>
                     </ul>
                     <div className="flex flex-col items-center justify-center gap-3">
-                        <LinkIcons />
+                        <LinkIcons isTrue={true} />
                     </div>
                 </div>
             </div>

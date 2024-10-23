@@ -2,7 +2,7 @@
 import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { useState } from "react";
 
-export default function LinkIcons() {
+export default function LinkIcons({ isTrue }) {
     const [icons,] = useState([
         { id: 1, icon: <FaFacebookF />, bg: "#3b5998" },
         { id: 2, icon: <FaXTwitter />, bg: "#000" },
@@ -10,7 +10,7 @@ export default function LinkIcons() {
     ]);
     return (
         <>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
                 {icons.map(item => (
                     <div
                         key={item.id}
@@ -28,9 +28,12 @@ export default function LinkIcons() {
                     </div>
                 ))}
             </div>
-            <div>
-                <span className="text-white word">توسعه شده توسط <span id="enFont">HAMEDPYN</span></span>
-            </div>
+            {isTrue && (
+                <div>
+                    <span className="text-white word">توسعه شده توسط <span id="enFont">HAMEDPYN</span>
+                    </span>
+                </div>
+            )}
         </>
     );
 }
