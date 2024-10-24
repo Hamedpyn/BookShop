@@ -30,7 +30,7 @@ export default function LinkIcons({ isTrue }) {
             </div>
             {isTrue && (
                 <div>
-                    <span className="text-white word">توسعه شده توسط <span id="enFont">HAMEDPYN</span>
+                    <span className="text-white word">توسعه داده شده توسط <span id="enFont">HAMEDPYN</span>
                     </span>
                 </div>
             )}

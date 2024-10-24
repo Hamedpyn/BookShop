@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function MainHome() {
   return (
-    <div className="h-[780px] sm:h-[730px] lg:h-[470px] overflow-hidden xl:h-[660px] max-w-[1450px] md:h-[820px] lg:rounded-bl-[100px] bg-[#f8f8fa]">
+    <div className="h-[780px] sm:h-[760px] lg:h-[470px] overflow-hidden xl:h-[660px] max-w-[1450px] md:h-[860px] lg:rounded-bl-[100px] bg-[#f8f8fa]">
       <div className="flex flex-col items-center pt-5 px-5 gap-14 lg:flex-row-reverse md:justify-center lg:justify-end lg:px-10 xl:mt-10 mainHomePage lg:pt-0">
         <div className="mainHome justify-center overflow-hidden relative flex md:basis-1/2">
           <img className="w-[400px] md:w-[500px] z-10 xl:w-[800px]" src="/Images/layer-slider-model.png" alt="Model" />
