@@ -204,7 +204,7 @@
     }
 
     .fontF {
-        left: 175px !important;
+        left: 180px !important;
     }
 
     .signIn {
@@ -262,6 +262,11 @@
     .collectionMenu {
         width: 420px !important;
         height: 300px !important;
+    }
+
+    .breadCrumb {
+        height: 260px !important;
+        margin-top: -140px;
     }
 }
 
