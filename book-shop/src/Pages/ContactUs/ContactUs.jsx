@@ -1,10 +1,12 @@
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
+import ContactsDetails from "../../Components/ContactsDetails/ContactsDetails";
 
 
 export default function ContactUs() {
   return (
     <>
-        <BreadCrumb title={"تماس با ما"} tag={"تماس با ما"} />
+      <BreadCrumb title={"تماس با ما"} tag={"تماس با ما"} />
+      <ContactsDetails />
     </>
   )
 }
