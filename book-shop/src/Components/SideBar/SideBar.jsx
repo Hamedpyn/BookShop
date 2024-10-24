@@ -64,7 +64,7 @@ export default function SideBar(sideBarObject) {
                         </li>
                         <li className="mr-[-1px]">
                             <NavLink
-                                to="/books"
+                                to="/Books"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
                             >
                                 کتاب ها
@@ -178,9 +178,14 @@ export default function SideBar(sideBarObject) {
                             </div>
                         </SideBarSubMenu>
 
-                        <li className="link-67">
-                            <span>تماس با ما</span>
-                        </li>
+                        <li className="mr-[-1px]">
+                            <NavLink
+                                to="/ContactUs"
+                                className={({ isActive }) => (isActive ? "active" : "link-67")}
+                            >
+                                تماس با ما
+                            </NavLink>
+                            </li>
                         <Button className="md:hidden rounded mt-5" color="light">
                             ورود / ثبت نام
                         </Button>

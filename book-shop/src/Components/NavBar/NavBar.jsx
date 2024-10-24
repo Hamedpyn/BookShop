@@ -8,17 +8,17 @@ export default function NavBar() {
   const [subMenuDetails,] = useState(subMenuDetail)
   return (
     <ul className="flex navbar-menu h-full items-center">
-      <li className="relative py-[62px] group cursor-pointer underEffect">
+      <li className="relative py-[62px] group underEffect">
         <NavLink to={"/"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
           صفحه اصلی
         </NavLink>
       </li>
-      <li className="relative py-[62px] group underEffect cursor-pointer">
-        <NavLink to={"/books"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
+      <li className="relative py-[62px] group underEffect">
+        <NavLink to={"/Books"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
           کتاب ها
         </NavLink>
       </li>
-      <li className="py-[62px] group underEffect relative cursor-pointer">
+      <li className="py-[62px] group underEffect relative">
         <a className=" border-l-2 h-4 flex items-center cursor-pointer group-hover:text-current transition-all border-[#f6f7f9] px-2 gap-1">
           <span>مجموعه</span>
           <span>
@@ -35,7 +35,7 @@ export default function NavBar() {
           ))}
         </ul>
       </li>
-      <li className="py-[62px] relative underEffect group cursor-pointer">
+      <li className="py-[62px] relative underEffect group">
         <a className="cursor-pointer group-hover:text-current transition-all underEffect border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
           <span>دسته بندی</span>
           <span>
@@ -84,7 +84,7 @@ export default function NavBar() {
           </li>
         </ul>
       </li>
-      <li className="py-[62px] relative underEffect group cursor-pointer">
+      <li className="py-[62px] relative underEffect group">
         <a className="cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2 gap-1">
           <span>صفحات</span>
           <span>
@@ -108,8 +108,8 @@ export default function NavBar() {
           </li>
         </ul>
       </li>
-      <li className="relative py-[58px] group cursor-pointer underEffect">
-        <NavLink to={"/contact-us"} className={({ isActive }) => (isActive ? "isActive px-2" : "cursor-pointer group-hover:text-current transition-all px-2")}>
+      <li className="relative py-[58px] group underEffect">
+        <NavLink to={"/ContactUs"} className={({ isActive }) => (isActive ? "isActive px-2" : "cursor-pointer group-hover:text-current transition-all px-2")}>
           تماس با ما
         </NavLink>
       </li>
