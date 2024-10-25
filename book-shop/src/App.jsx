@@ -1,5 +1,6 @@
-import { useRoutes } from 'react-router-dom'
 import './App.css'
+import 'leaflet/dist/leaflet.css';
+import { useRoutes } from 'react-router-dom'
 import routes from './router'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
