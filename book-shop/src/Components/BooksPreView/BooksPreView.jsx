@@ -20,11 +20,11 @@ export default function BooksPreView() {
                 </div>
                 <div className="flex flex-col items-center mb-40 gap-16 flex-wrap md:flex-row justify-center">
                     {books.map(item => (
-                        <BookCard key={item.id} {...item} />
+                        <BookCard isTrue={false} key={item.id} {...item} />
                     ))}
                 </div>
                 <NavLink to={"books"} className={({ isActive }) => (isActive ? "" : "")}>
-                    <button className="bg-current flex py-4 px-6 rounded-full text-white cursor-pointer hover:bg-black transition-all">
+                    <button onClick={()=> window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} className="bg-current flex py-4 px-6 rounded-full text-white cursor-pointer hover:bg-black transition-all">
                     مشاهده کل مجموعه
                     </button>
                 </NavLink>
