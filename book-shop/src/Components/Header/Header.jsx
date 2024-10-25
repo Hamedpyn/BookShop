@@ -4,6 +4,7 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
 import SideBar from "../SideBar/SideBar";
 import NavBar from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 function Header() {
     const [isCategoryMenuOn, setIsCategoryMenuOn] = useState(false);
@@ -60,7 +61,9 @@ function Header() {
                         <NavBar />
                     </div>
                     <div className="menuBasis md:relative justify-end items-center gap-4 relative lg:basis-auto lg:h-[140px] lg:mr-3 lg:justify-center lg:w-[200px] xl:!w-[240px] basket xl:mr-10">
-                        <FaBasketShopping className="menuButton bg-[#f8f8fa] text-gray-700 border border-gray-300" />
+                        <Link to={"/Basket"}>
+                            <FaBasketShopping className="menuButton bg-[#f8f8fa] text-gray-700 border border-gray-300" />
+                        </Link>
                         <span className="fontF absolute bottom-0 md:left-[175px] lg:bottom-[46px] 
                          md:bottom-[5px] lg:left-[155px] bg-red-600 rounded-full p-1 h-4 flex justify-center items-center text-xs xl:!left-[188px]">0</span>
                         <button className="signIn hidden md:flex rounded-full bg-current items-center hover:bg-black transition-all duration-200 px-6 py-4 lg:py-0 lg:text-sm lg:h-[60px] gap-2 xl:px-7">
