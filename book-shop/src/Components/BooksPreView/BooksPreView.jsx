@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
 import { allBooksDetails, bookPreView } from "../datas/Datas";
 import BookCard from "../BookCard/BookCard";
@@ -9,20 +9,22 @@ export default function BooksPreView() {
     const contextData = useContext(UserBasketContext)
     const [books,] = useState(bookPreView)
 
-    const preViewToBasket = (itemId, itemTitle) => {
-        let { bookBasket, setBookBasket } = contextData
-        let isInBasket = bookBasket.some(item => item.title == itemTitle)
-        
+    const preViewToBasket = useCallback((itemId, itemTitle) => {
+        const { bookBasket, setBookBasket } = contextData;
+        const isInBasket = bookBasket.some(item => item.title === itemTitle);
+    
         if (isInBasket) {
-          const updateCart = bookBasket.map(item => item.title === itemTitle ? {...item,quantity:item.quantity + 1} : item)
-          setBookBasket(updateCart)
+          const updatedCart = bookBasket.map(item =>
+            item.title === itemTitle ? { ...item, quantity: item.quantity + 1 } : item
+          );
+          setBookBasket(updatedCart);
         } else {
-          const findItem = allBooksDetails.find(item => item.id === itemId)
-          let { title, img, price } = findItem
-          let newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1, }
-          setBookBasket(prev => [newItemToBasket, ...prev])
+          const findItem = allBooksDetails.find(item => item.id === itemId);
+          const { title, img, price } = findItem;
+          const newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1 };
+          setBookBasket(prev => [newItemToBasket, ...prev]);
         }
-      };
+      }, [contextData]);
 
     return (
         <div className="mt-20 mb-20">

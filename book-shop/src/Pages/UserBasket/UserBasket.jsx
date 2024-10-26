@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import { PayUpModal } from '../../Components/PayUpModal/PayUpModal';
 
 export default function UserBasket() {
-  window.scrollTo({ top: 200, left: 0, behavior: 'smooth' });
 
   const [isModal, setIsModal] = useState(false);
   const contextData = useContext(UserBasketContext);
