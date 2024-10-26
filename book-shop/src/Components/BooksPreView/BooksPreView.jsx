@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
-import { bookPreView } from "../datas/Datas";
+import { allBooksDetails, bookPreView } from "../datas/Datas";
 import BookCard from "../BookCard/BookCard";
 import { NavLink } from "react-router-dom";
+import UserBasketContext from "../../Contexts/UserBasketContext";
 
 export default function BooksPreView() {
+    const contextData = useContext(UserBasketContext)
     const [books,] = useState(bookPreView)
+
+    const preViewToBasket = (itemId, itemTitle) => {
+        let { bookBasket, setBookBasket } = contextData
+        let isInBasket = bookBasket.some(item => item.title == itemTitle)
+        
+        if (isInBasket) {
+          const updateCart = bookBasket.map(item => item.title === itemTitle ? {...item,quantity:item.quantity + 1} : item)
+          setBookBasket(updateCart)
+        } else {
+          const findItem = allBooksDetails.find(item => item.id === itemId)
+          let { title, img, price } = findItem
+          let newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1, }
+          setBookBasket(prev => [newItemToBasket, ...prev])
+        }
+      };
+
     return (
         <div className="mt-20 mb-20">
             <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1600 172">
@@ -20,7 +38,7 @@ export default function BooksPreView() {
                 </div>
                 <div className="flex flex-col items-center mb-40 gap-16 flex-wrap md:flex-row justify-center">
                     {books.map(item => (
-                        <BookCard isTrue={false} key={item.id} {...item} />
+                        <BookCard onItem={()=>preViewToBasket(item.id,item.title)} isTrue={false} key={item.id} {...item} />
                     ))}
                 </div>
                 <NavLink to={"books"} className={({ isActive }) => (isActive ? "" : "")}>
