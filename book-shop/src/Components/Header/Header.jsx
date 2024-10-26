@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { FaBasketShopping } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
 import SideBar from "../SideBar/SideBar";
 import NavBar from "../NavBar/NavBar";
 import { Link } from "react-router-dom";
+import UserBasketContext from "../../Contexts/UserBasketContext";
 
 function Header() {
+    const contextData =useContext(UserBasketContext) 
     const [isCategoryMenuOn, setIsCategoryMenuOn] = useState(false);
     const [isPagesMenuOn, setIsPagesMenuOn] = useState(false);
     const [isTrue, setIsTrue] = useState(false);
@@ -65,7 +67,7 @@ function Header() {
                             <FaBasketShopping className="menuButton bg-[#f8f8fa] text-gray-700 border border-gray-300" />
                         </Link>
                         <span className="fontF absolute bottom-0 md:left-[175px] lg:bottom-[46px] 
-                         md:bottom-[5px] lg:left-[155px] bg-red-600 rounded-full p-1 h-4 flex justify-center items-center text-xs xl:!left-[188px]">0</span>
+                         md:bottom-[5px] lg:left-[155px] bg-red-600 rounded-full p-1 h-4 flex justify-center items-center text-xs xl:!left-[188px]">{contextData.bookBasket.length}</span>
                         <button className="signIn hidden md:flex rounded-full bg-current items-center hover:bg-black transition-all duration-200 px-6 py-4 lg:py-0 lg:text-sm lg:h-[60px] gap-2 xl:px-7">
                             <FaUserAlt />
                             <span> ورود / ثبت نام</span>
