@@ -6,6 +6,7 @@ import MainHome from "../../Components/MainHome/MainHome";
 import SpecialDiscount from "../../Components/SpecialDiscount/SpecialDiscount";
 
 export default function Home() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   return (
     <>
       <MainHome />

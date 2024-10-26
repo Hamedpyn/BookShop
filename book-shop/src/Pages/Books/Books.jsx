@@ -12,6 +12,7 @@ export default function Books() {
   const [filteredBooks, setFilteredBooks] = useState([])
   let pageSize = 6
   let pagesNumber = null;
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
   useEffect(() => {
     let endIndex = pageSize * currentPage
