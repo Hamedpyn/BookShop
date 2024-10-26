@@ -4,6 +4,11 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 export default function BookCard(props) {
+
+    const addToBasket = () => {
+        props.onItem()
+    };
+
     return (
         <div className="relative flex items-center flex-col">
             <Link to={`/Books/${props.id}`} className={ `bg-white rounded-3xl w-10/12 sm:w-1/2 md:w-[300px] group flex items-center flex-col ${props.isTrue ?"border md:w-[400px]" :""}`}>
@@ -22,7 +27,7 @@ export default function BookCard(props) {
                     </div>
                 </div>
             </Link>
-                <div className="bg-current absolute bottom-[-22px] sm:bottom-[-25px] sm:px-7 flex px-10 py-3 sm:py-2 text-lg justify-center gap-2 rounded-full text-white cursor-pointer hover:bg-black items-center transition-all">
+                <div className="bg-current absolute bottom-[-22px] sm:bottom-[-25px] sm:px-7 flex px-10 py-3 sm:py-2 text-lg justify-center gap-2 rounded-full text-white cursor-pointer hover:bg-black items-center transition-all" onClick={()=>addToBasket(props.id)}>
                     <RiShoppingCartLine className="w-6 h-6" />
                     <span className="regular text-xl">افزودن به سبد خرید</span>
                 </div>
