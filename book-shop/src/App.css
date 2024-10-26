@@ -239,6 +239,15 @@
     }
 
 }
+@media (min-width: 880px) {
+    .thWidth {
+        width: 130px !important;
+    }
+    .trWidth {
+        width: 780px !important;
+    }
+
+}
 
 @media (min-width: 1340px) {
     .navbar-space {
@@ -338,6 +347,22 @@
     .mainHome::after {
         height: 350px !important;
         width: 350px !important;
+    }
+}
+@media (min-width: 1030px) {
+    .thWidth {
+        width: 155px !important;
+    }
+    .trWidth {
+        width: 930px !important;
+    }
+}
+@media (min-width: 1290px) {
+    .thWidth {
+        width: 200px !important;
+    }
+    .trWidth {
+        width: 1200px !important;
     }
 }
 
