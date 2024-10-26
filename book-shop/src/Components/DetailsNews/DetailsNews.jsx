@@ -4,7 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export default function DetailsNews({ tag,isTrue, Title }) {
     return (
-        <div className={`flex overflow-hidden bg-[#465392] rounded-[40px] flex-col gap-10 h-[500px] w-11/12 items-center  pt-20 justify-center max-w-[1280px] ${isTrue ? "bg-image" : "bg-current md:gap-14 relative boxEffect !h-[414px]"}`}>
+        <div className={`flex overflow-hidden bg-[#465392] rounded-[40px] flex-col gap-10 h-[500px] w-11/12 items-center  pt-20 justify-center max-w-[1280px] ${isTrue ? "bg-image" : "bg-current md:gap-14 relative boxEffect md:!h-[414px]"}`}>
 
             <button className={`regular cursor-auto text-white py-2 px-5 rounded-full text-[16px] ${isTrue ? "bg-current" : "bg-[#27187E]"} text-lg !py-1`}>{tag}</button>
             <h2 className="kalameh w-[71%] line text-center leading-tight text-white text-6xl">
