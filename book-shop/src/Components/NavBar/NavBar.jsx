@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { subMenuDetail } from "../../datas/Datas";
 import { Button } from "flowbite-react";
 
@@ -45,41 +45,41 @@ export default function NavBar() {
 
         <ul className={`transition-opacity ease-out absolute top-[135px] right-0 w-[350px] group-hover:visible group-hover:opacity-100 invisible opacity-0 collectionMenu h-[280px] rounded-md bg-current z-50 group flex pt-5 text-white delay-100 duration-200 px-10`}>
           <li className="basis-1/2 flex flex-col items-start ml-10">
-            <span>مجموعه جذاب</span>
+            <span className="kalameh !text-xl">مجموعه جذاب</span>
             <div className={`subOrgMenu flex flex-col gap-2 pt-2`}>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-ماجراجویی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-رمان</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-کمدی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-فانتزی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-تاریخی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-جنایی</span>
+              <Link to={'/Collection/Adventures'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-ماجراجویی</Link>
+              <Link to={'/Collection/Romance'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-رمان</Link>
+              <Link to={'/Collection/Comedy'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-کمدی</Link>
+              <Link to={'/Collection/Fantasy'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-فانتزی</Link>
+              <Link to={'/Collection/Historical'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-تاریخی</Link>
+              <Link to={'/Collection/Horror'} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-جنایی</Link>
             </div>
           </li>
           <li className="basis-1/2 flex flex-col items-start">
-            <span>مجموعه رایگان</span>
+            <span className="kalameh !text-xl">مجموعه رایگان</span>
             <div className={`subOrgMenu flex flex-col gap-2 pt-2`}>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-ستاره شناسی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-جئوگرافی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-ورزشی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-تاریخی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-ادبیات داستانی</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-اقتصاد</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-کلاسیک</span>
-              <span className="opacity-60 hover:opacity-100 pr-3 text-sm"
-              >-بیوگرافی</span>
+              <Link to={"/Collection/Astronomy"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-ستاره شناسی</Link>
+              <Link to={"/Collection/Geographic"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-جئوگرافی</Link>
+              <Link to={"/Collection/Sports"}  className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-ورزشی</Link>
+              <Link to={"/Collection/Historical"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-تاریخی</Link>
+              <Link to={"/Collection/Literary-fiction"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-ادبیات داستانی</Link>
+              <Link to={"/Collection/Economy"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-اقتصاد</Link>
+              <Link to={"/Collection/Classic"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-کلاسیک</Link>
+              <Link to={"/Collection/Biography"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              >-بیوگرافی</Link>
             </div>
           </li>
         </ul>

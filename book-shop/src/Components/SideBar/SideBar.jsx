@@ -1,7 +1,7 @@
 import { Button } from "flowbite-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LinkIcons from "../linkIcons/LinkIcons"
 import SideBarSubMenu from "../SideBarSubMenu/SideBarSubMenu";
 import { FaChevronDown } from "react-icons/fa6";
@@ -9,7 +9,7 @@ import { subMenuDetail } from "../../datas/Datas";
 import UserBasketContext from "../../Contexts/UserBasketContext";
 
 export default function SideBar(sideBarObject) {
-    const {setOpenModal} = useContext(UserBasketContext)
+    const { setOpenModal } = useContext(UserBasketContext)
 
     const [subMenuDetails,] = useState(subMenuDetail);
     let wrapperRef = useRef();
@@ -61,6 +61,7 @@ export default function SideBar(sideBarObject) {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
+                                onClick={()=>sideBarObject.setIsTrue(false)}
                             >
                                 صفحه اصلی
                             </NavLink>
@@ -69,6 +70,7 @@ export default function SideBar(sideBarObject) {
                             <NavLink
                                 to="/Books"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
+                                onClick={()=>sideBarObject.setIsTrue(false)}
                             >
                                 کتاب ها
                             </NavLink>
@@ -98,48 +100,62 @@ export default function SideBar(sideBarObject) {
                         <SideBarSubMenu isSubMenuOn={sideBarObject.isCategoryMenuOn}>
                             <div className="flex flex-col mt-[-25px] mb-5">
                                 <span onClick={() => sideBarObject.setInterestingCollection(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.interestingCollection && "opacity-100"}`}>
-                                    <span>-مجموعه جذاب</span>
+                                    <span className="!text-xl kalameh">-مجموعه جذاب</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.interestingCollection ? "transform rotate-180" : ""}`} />
                                 </span>
                                 <SideBarSubMenu isSubMenuOn={sideBarObject.interestingCollection}>
                                     <div className={`flex flex-col mt-[-10px] mb-5`}>
-                                        <span className="collectionSubMenu px-11"
-                                        >-ماجراجویی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-رمان</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-کمدی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-فانتزی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-تاریخی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-جنایی</span>
+                                        <Link to={"/Collection/Adventures"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-ماجراجویی</Link>
+                                        <Link to={"/Collection/Romance"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-رمان</Link>
+                                        <Link to={"/Collection/Comedy"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-کمدی</Link>
+                                        <Link to={"/Collection/Fantasy"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-فانتزی</Link>
+                                        <Link to={"/Collection/Historical"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-تاریخی</Link>
+                                        <Link to={"/Collection/Horror"} className="collectionSubMenu px-11 light"
+                                            onClick={() => sideBarObject.setIsTrue(false)}
+                                        >-جنایی</Link>
                                     </div>
                                 </SideBarSubMenu>
 
                                 <span onClick={() => sideBarObject.setFreeCollection(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.freeCollection && "opacity-100"}`} >
-                                    <span>-مجموعه رایگان</span>
+                                    <span className="!text-xl kalameh">-مجموعه رایگان</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.freeCollection ? "transform rotate-180" : ""}`} />
                                 </span>
                                 <SideBarSubMenu isSubMenuOn={sideBarObject.freeCollection}>
                                     <div className={`flex flex-col mt-[-10px]`}>
-                                        <span className="collectionSubMenu px-11"
-                                        >-ستاره شناسی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-جئوگرافی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-ورزشی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-تاریخی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-ادبیات داستانی</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-اقتصاد</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-کلاسیک</span>
-                                        <span className="collectionSubMenu px-11"
-                                        >-بیوگرافی</span>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Astronomy"} className="collectionSubMenu px-11 light"
+                                        >-ستاره شناسی</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Geographic"} className="collectionSubMenu px-11 light"
+                                        >-جئوگرافی</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Sports"} className="collectionSubMenu px-11 light"
+                                        >-ورزشی</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Historical"} className="collectionSubMenu px-11 light"
+                                        >-تاریخی</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Literary-fiction"} className="collectionSubMenu px-11 light"
+                                        >-ادبیات داستانی</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Economy"} className="collectionSubMenu px-11 light"
+                                        >-اقتصاد</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Classic"} className="collectionSubMenu px-11 light"
+                                        >-کلاسیک</Link>
+                                        <Link onClick={() => sideBarObject.setIsTrue(false)}
+                                            to={"/Collection/Biography"} className="collectionSubMenu px-11 light"
+                                        >-بیوگرافی</Link>
                                     </div>
                                 </SideBarSubMenu>
                             </div>
@@ -175,7 +191,7 @@ export default function SideBar(sideBarObject) {
                                         >-زیر منو 2</span>
                                         <span className="collectionSubMenu px-11"
                                         >-زیر منو 3</span>
-                                        
+
                                     </div>
                                 </SideBarSubMenu>
                             </div>
@@ -185,11 +201,12 @@ export default function SideBar(sideBarObject) {
                             <NavLink
                                 to="/ContactUs"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
+                                onClick={() => sideBarObject.setIsTrue(false)}
                             >
                                 تماس با ما
                             </NavLink>
-                            </li>
-                        <Button onClick={()=>setOpenModal(true)} className="md:hidden rounded mt-5" color="light">
+                        </li>
+                        <Button onClick={() => setOpenModal(true)} className="md:hidden rounded mt-5" color="light">
                             ورود / ثبت نام
                         </Button>
                     </ul>
