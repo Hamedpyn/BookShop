@@ -5,12 +5,13 @@ import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { allBooksDetails } from "../../datas/Datas";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import UserBasketContext from "../../Contexts/UserBasketContext";
+import { Alert } from "flowbite-react";
 
 export default function Books() {
   const [books] = useState(allBooksDetails);
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredBooks, setFilteredBooks] = useState([]);
-  const { bookBasket, setBookBasket } = useContext(UserBasketContext);
+  const { bookBasket, setBookBasket, isModal } = useContext(UserBasketContext);
 
   const pageSize = 6;
   const pageCount = useMemo(() => Math.ceil(books.length / pageSize), [books.length]);
@@ -85,6 +86,11 @@ export default function Books() {
             <HiArrowLongLeft className="text-xl text-current group-hover:text-white" />
           </button>
         )}
+      </div>
+      <div className={`z-50 bold fixed top-[10px] right-[10px] transition-all ease-out duration-300 ${isModal ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}`}>
+        <Alert color="success" withBorderAccent>
+          <span className="font-medium">محصول مورد نظر شما با موفقیت به سبد خرید اضافه شد.</span>
+        </Alert>
       </div>
     </div>
   );

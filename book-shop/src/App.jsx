@@ -9,7 +9,8 @@ import { useState } from 'react';
 import { LoginModal } from './Components/LoginModal/LoginModal';
 
 function App() {
-  const [bookBasket,setBookBasket]=useState([])
+  const [bookBasket, setBookBasket] = useState([])
+  const [isModal, setIsModal] = useState(false)
   const [openModal,setOpenModal]=useState(false)
 
   let router = useRoutes(routes)
