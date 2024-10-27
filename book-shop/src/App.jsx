@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './App.css'
 import 'leaflet/dist/leaflet.css';
 import { useRoutes } from 'react-router-dom'
@@ -5,13 +6,24 @@ import routes from './router'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import UserBasketContext from "./Contexts/UserBasketContext"
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { FaChevronUp } from "react-icons/fa";
 import { LoginModal } from './Components/LoginModal/LoginModal';
 
 function App() {
   const [bookBasket, setBookBasket] = useState([])
   const [isModal, setIsModal] = useState(false)
   const [openModal,setOpenModal]=useState(false)
+  
+    // Load basket from local storage on component mount
+    useEffect(() => {
+      const savedBasket = JSON.parse(localStorage.getItem('books')) || [];
+      setBookBasket(savedBasket);
+    }, []);
+
+  useEffect(() => {
+    localStorage.setItem("books",JSON.stringify(bookBasket))
+  }, [bookBasket])
 
   const scrollRef = useRef()
   useEffect(() => {
