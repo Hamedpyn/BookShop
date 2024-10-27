@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaBasketShopping } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function DetailsNews({ tag,isTrue, Title }) {
     return (
@@ -19,10 +20,10 @@ export default function DetailsNews({ tag,isTrue, Title }) {
 
                         این کتاب با ایده رایج یک کتاب الکترونیکی متفاوت است.
                     </p>
-                    <button className="flex items-center rounded-full gap-3 flex-row-reverse bg-white text-current my-10 transition-all hover:bg-[#59659E] py-5 px-6 hover:text-white">
+                    <Link to={'/Books'}><button className="flex items-center rounded-full gap-3 flex-row-reverse bg-white text-current my-10 transition-all hover:bg-[#59659E] py-5 px-6 hover:text-white">
                         <span>همین الان خرید کنید</span>
                         <span><FaBasketShopping /> </span>
-                    </button>
+                    </button></Link>
                 </>
             ) : (
                 <div className="flex flex-col-reverse items-center joinInput w-2/4 rounded-full gap-2 mb-5">
