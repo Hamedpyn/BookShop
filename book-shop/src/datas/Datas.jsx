@@ -6,14 +6,14 @@ const subMenuDetail = [
 ];
 
 const bookPreView = [
-    { id: 1, title: "صلیب بانو", price: 99, img: "/Images/book-10-600x600.jpg" },
+    { id: 9, title: "صلیب بانو", price: 99, img: "/Images/book-10-600x600.jpg" },
     { id: 2, title: "افعی در پنجره", price: 35, img: "/Images/package4-1-600x600.jpg" },
-    { id: 3, title: "هرگز رویا را متوقف نکنید", price: 44, img: "/Images/package8-1-600x600.jpg" },
-    { id: 4, title: "سیارات", price: 87, img: "/Images/book-11-600x600.jpg" },
-    { id: 5, title: "زندگی نامه", price: 20, img: "/Images/package2-1-600x600.jpg" },
-    { id: 6, title: "دنباله کتابها", price: 79, img: "/Images/book-12-600x600.jpg" },
-    { id: 7, title: "شبکه R", price: 22, img: "Images/package5-1-600x600-1.jpg" },
-    { id: 8, title: "غار", price: 18, img: "/Images/package6-1-600x600.jpg" },
+    { id: 12, title: "هرگز رویا را متوقف نکنید", price: 44, img: "/Images/package8-1-600x600.jpg" },
+    { id: 7, title: "سیارات", price: 87, img: "/Images/book-11-600x600.jpg" },
+    { id: 6, title: "زندگی نامه", price: 20, img: "/Images/package2-1-600x600.jpg" },
+    { id: 4, title: "دنباله کتابها", price: 79, img: "/Images/book-12-600x600.jpg" },
+    { id: 8, title: "شبکه R", price: 22, img: "Images/package5-1-600x600-1.jpg" },
+    { id: 10, title: "غار", price: 18, img: "/Images/package6-1-600x600.jpg" },
 ]
 
 const usersComments = [
@@ -41,18 +41,17 @@ const footerSubMenu = [
 ]
 
 const allBooksDetails = [
-    { id: 1, title: "5 سال", img: "/Images/book-9.jpg", price: 69 },
-    { id: 2, title: "افعی در پنجره", price: 35, img: "/Images/package4-1-600x600.jpg" },
-    { id: 3, title: "تولد", img: "/Images/package2-1.jpg", price: 35 },
-    { id: 4, title: "دنباله کتابها", price: 79, img: "/Images/book-12-600x600.jpg" },
-    { id: 5, title: "رودخانه اکسترا", price: 15, img: "/Images/package1-1-600x600.jpg" },
-    { id: 6, title: "زندگی نامه", price: 20, img: "/Images/package2-1.jpg" },
-    { id: 7, title: "سیارات", price: 87, img: "/Images/book-11-600x600.jpg" },
-    { id: 8, title: "شبکه R", price: 22, img: "Images/package5-1-600x600-1.jpg" },
-    { id: 9, title: "صلیب بانو", price: 99, img: "/Images/book-10-600x600.jpg" },
-    { id: 10, title: "غار", price: 18, img: "/Images/package6-1-600x600.jpg" },
-    { id: 11, title: "لوازم آرایشی طبیعی", price: 18, img: "/Images/package3-1.jpg" },
-    { id: 12, title: "هرگز رویا را متوقف نکنید", price: 44, img: "/Images/package8-1-600x600.jpg" },
+    { status:"موجود",code:"SKU_12",category:"economy",id: 1, title: "5 سال", img: "/Images/book-9.jpg", price: 69 },
+    { status:"موجود",code:"MUE_636",category:"comedy",id: 2, title: "افعی در پنجره", price: 35, img: "/Images/package4-1-600x600.jpg" },
+    { status:"موجود",code:"OPP_09",category:"sports",id: 3, title: "تولد", img: "/Images/package2-1.jpg", price: 35 },
+    { status:"موجود",code:"SPQ_72",category:"adventures",id: 4, title: "دنباله کتابها", price: 79, img: "/Images/book-12-600x600.jpg" },
+    { status:"موجود",code:"MJEO_29",category:"romance",id: 5, title: "رودخانه اکسترا", price: 15, img: "/Images/package1-1-600x600.jpg" },
+    { status:"موجود",code:"ERKI_560",category:"biography",id: 6, title: "زندگی نامه", price: 20, img: "/Images/package2-1.jpg" },
+    { status:"موجود",code:"KOU_22",category:"classical",id: 7, title: "سیارات", price: 87, img: "/Images/book-11-600x600.jpg" },
+    { status:"موجود",code:"CUB_4",category:"fantasy",id: 8, title: "شبکه R", price: 22, img: "Images/package5-1-600x600-1.jpg" },
+    { status:"موجود",code:"ARA_233",category:"historical",id: 9, title: "صلیب بانو", price: 99, img: "/Images/book-10-600x600.jpg" },
+    { status:"موجود",code:"LEW_55",category:"horror",id: 10, title: "غار", price: 18, img: "/Images/package6-1-600x600.jpg" },
+    { status:"موجود",code:"YAM_89",category:"",id: 11, title: "لوازم آرایشی طبیعی", price: 18, img: "/Images/package3-1.jpg" },
+    { status:"موجود",code:"RAPP_112",category:"action",id: 12, title: "هرگز رویا را متوقف نکنید", price: 44, img: "/Images/package8-1-600x600.jpg" },
 ]
-
 export { subMenuDetail, bookPreView, usersComments, authorsDetails, footerSubMenu, allBooksDetails }
