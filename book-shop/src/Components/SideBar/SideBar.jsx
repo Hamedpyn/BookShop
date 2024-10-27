@@ -1,13 +1,16 @@
 import { Button } from "flowbite-react";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import LinkIcons from "../linkIcons/LinkIcons"
 import SideBarSubMenu from "../SideBarSubMenu/SideBarSubMenu";
 import { FaChevronDown } from "react-icons/fa6";
 import { subMenuDetail } from "../../datas/Datas";
+import UserBasketContext from "../../Contexts/UserBasketContext";
 
 export default function SideBar(sideBarObject) {
+    const {setOpenModal} = useContext(UserBasketContext)
+
     const [subMenuDetails,] = useState(subMenuDetail);
     let wrapperRef = useRef();
     const [, setWidth] = useState(window.innerWidth);
@@ -186,7 +189,7 @@ export default function SideBar(sideBarObject) {
                                 تماس با ما
                             </NavLink>
                             </li>
-                        <Button className="md:hidden rounded mt-5" color="light">
+                        <Button onClick={()=>setOpenModal(true)} className="md:hidden rounded mt-5" color="light">
                             ورود / ثبت نام
                         </Button>
                     </ul>
