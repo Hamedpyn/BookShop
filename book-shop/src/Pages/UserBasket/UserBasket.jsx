@@ -6,6 +6,7 @@ import UserBasketContext from '../../Contexts/UserBasketContext';
 import { BsCartX } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { PayUpModal } from '../../Components/PayUpModal/PayUpModal';
+import { motion } from 'framer-motion';
 
 export default function UserBasket() {
 
@@ -43,13 +44,19 @@ export default function UserBasket() {
   }, []);
 
   return (
-    <div className="">
-      <div className="">
+    <div>
+      <div>
         <BreadCrumb tag={"سبد خرید"} title={"سبد خرید"} />
       </div>
-      <div className="flex flex-col mt-20 md:mt-10 md:flex-row w-full items-center gap-16 flex-wrap justify-center">
+      <div>
         {contextData.bookBasket.length ? (
           <>
+          <motion.div
+          className='flex flex-col mt-20 md:mt-10 md:flex-row w-full items-center gap-16 flex-wrap justify-center'
+        initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}>
             <Table striped className='md:pt-10 flex md:flex-col px-10 drop-shadow-none'>
               <Table.Head className='hidden md:flex items-center justify-center md:w-full'>
                 <Table.HeadCell className='text-[16px] text-center thWidth md:w-[100px] 2xl:!w-[220px]'>محصول</Table.HeadCell>
@@ -91,6 +98,7 @@ export default function UserBasket() {
                 ))}
               </Table.Body>
             </Table>
+            
             <div className="flex flex-col items-center w-full">
               <div className="w-11/12 max-w-[500px] flex gap-5 flex-col items-center h-[340px] sm:h-[260px] rounded-[40px] bg-[#F1F2F6]">
                 <h3 className='bg-current kalameh text-xl text-white transition-all rounded-full text-center w-11/12 py-3 mt-5 mx-5'>جمع کل سبد خرید</h3>
@@ -111,10 +119,11 @@ export default function UserBasket() {
               </div>
               <PayUpModal isModal={isModal} setIsModal={setIsModal} />
             </div>
+            </motion.div>
           </>
         ) : (
           <div className="flex items-center flex-col gap-5">
-            <span className=""><BsCartX className='text-[150px] sm:text-[200px]' /></span>
+            <span><BsCartX className='text-[150px] sm:text-[200px]' /></span>
             <h2 className="kalameh text-3xl">سبد خرید شما خالی است!</h2>
             <h4 className="light text-xl text-gray-400">زمان اون رسیده که خریدتون رو شروع کنید</h4>
             <Link to='/Books'>
