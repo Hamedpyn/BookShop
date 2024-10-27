@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useMemo, useCallback } from "react";
+import { useContext, useEffect, useState, useMemo, useCallback,useId } from "react";
 import BookCard from "../../Components/BookCard/BookCard";
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { allBooksDetails } from "../../datas/Datas";
@@ -29,6 +29,8 @@ export default function Books() {
 
   const PaginateBooks = useCallback((buttonNum) => setCurrentPage(buttonNum), []);
 
+  const uniqueId = useId();
+
   const preViewToBasket = useCallback((itemId, itemTitle) => {
     const isInBasket = bookBasket.some(item => item.title === itemTitle);
 
@@ -41,11 +43,11 @@ export default function Books() {
       const findItem = allBooksDetails.find(item => item.id === itemId);
       if (findItem) {
         const { title, img, price } = findItem;
-        const newItemToBasket = { id: bookBasket.length, title, img, price, quantity: 1 };
+        const newItemToBasket = { id: `${itemId}-${uniqueId}`, title, img, price, quantity: 1 };
         setBookBasket(prev => [newItemToBasket, ...prev]);
       }
     }
-  }, [bookBasket, setBookBasket]);
+  }, [bookBasket, setBookBasket,uniqueId]);
 
   return (
     <div>

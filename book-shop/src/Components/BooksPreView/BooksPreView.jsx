@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useState,useId } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
 import { allBooksDetails, bookPreView } from "../../datas/Datas";
 import BookCard from "../BookCard/BookCard";
@@ -8,6 +8,7 @@ import UserBasketContext from "../../Contexts/UserBasketContext";
 export default function BooksPreView() {
     const contextData = useContext(UserBasketContext)
     const [books,] = useState(bookPreView)
+    const uniqueId = useId()
 
     const preViewToBasket = useCallback((itemId, itemTitle) => {
         const { bookBasket, setBookBasket } = contextData;
@@ -21,10 +22,10 @@ export default function BooksPreView() {
         } else {
             const findItem = allBooksDetails.find(item => item.id === itemId);
             const { title, img, price } = findItem;
-            const newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1 };
+            const newItemToBasket = { id: `${itemId}-${uniqueId}`, title, img, price, quantity: 1 };
             setBookBasket(prev => [newItemToBasket, ...prev]);
         }
-    }, [contextData]);
+    }, [contextData,uniqueId]);
 
     return (
         <div className="mt-20 mb-20">
