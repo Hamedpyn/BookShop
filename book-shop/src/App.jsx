@@ -13,11 +13,23 @@ function App() {
   const [isModal, setIsModal] = useState(false)
   const [openModal,setOpenModal]=useState(false)
 
+  const scrollRef = useRef()
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 700 ? scrollRef.current.classList.add("backToTop") : scrollRef.current.classList.remove("backToTop")
+    })
+  }, [window.scrollY])
+
   let router = useRoutes(routes)
   return (
     <UserBasketContext.Provider value={{ bookBasket, setBookBasket, isModal, setIsModal,openModal,setOpenModal }}>
       <Header />
       {router}
+      <div className="">
+        <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
+          <FaChevronUp className='text-xl' />
+        </button>
+      </div>
       {openModal && (
         <LoginModal />
       )}

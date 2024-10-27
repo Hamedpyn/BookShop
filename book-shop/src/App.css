@@ -444,3 +444,9 @@
     padding: 60px;
     border-radius: 40px;
 }
+
+.backToTop {
+    opacity: 1 !important;
+    transition: all 0.3s ease-in;
+    visibility: visible !important;
+}
