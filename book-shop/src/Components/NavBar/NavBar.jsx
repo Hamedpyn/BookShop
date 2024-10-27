@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-import { subMenuDetail } from "../datas/Datas";
+import { subMenuDetail } from "../../datas/Datas";
 import { Button } from "flowbite-react";
 
 export default function NavBar() {

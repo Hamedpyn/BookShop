@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
-import { authorsDetails } from "../datas/Datas";
+import { authorsDetails } from "../../datas/Datas";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa";

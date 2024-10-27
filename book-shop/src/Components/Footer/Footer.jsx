@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { footerSubMenu } from "../datas/Datas";
+import { footerSubMenu } from "../../datas/Datas";
 import DetailsNews from "../DetailsNews/DetailsNews";
 import LinkIcons from "../linkIcons/LinkIcons"
 import FooterMenu from "../FooterMenu/FooterMenu";

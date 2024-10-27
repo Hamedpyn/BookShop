@@ -1,6 +1,6 @@
 import { useCallback, useContext, useState } from "react";
 import ComponentsTitle from "../ComponentsTitle/ComponentsTitle";
-import { allBooksDetails, bookPreView } from "../datas/Datas";
+import { allBooksDetails, bookPreView } from "../../datas/Datas";
 import BookCard from "../BookCard/BookCard";
 import { NavLink } from "react-router-dom";
 import UserBasketContext from "../../Contexts/UserBasketContext";

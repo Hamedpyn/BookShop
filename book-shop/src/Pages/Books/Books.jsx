@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState, useMemo, useCallback } from "react";
 import BookCard from "../../Components/BookCard/BookCard";
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
-import { allBooksDetails } from "../../Components/datas/Datas";
+import { allBooksDetails } from "../../datas/Datas";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import UserBasketContext from "../../Contexts/UserBasketContext";
 

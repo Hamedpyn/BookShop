@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { usersComments } from "../datas/Datas";
+import { usersComments } from "../../datas/Datas";
 import 'swiper/css';
 import { useState, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -43,15 +43,15 @@ export default function SwiperSlider() {
                 </SwiperSlide>
             ))}
             <div className="flex justify-center items-center gap-2">
-                <button 
-                    className='bg-current z-50 text-white rounded-2xl p-5 text-lg' 
+                <button
+                    className='bg-current z-50 text-white rounded-2xl p-5 text-lg'
                     onClick={() => swiperRef.current && swiperRef.current.slidePrev()} // Use the ref to call slideNext
                     aria-label="Next Slide"
                 >
                     <FaChevronRight className='w-5 h-5' />
                 </button>
-                <button 
-                    className='bg-current z-50 text-white rounded-2xl p-5 text-lg' 
+                <button
+                    className='bg-current z-50 text-white rounded-2xl p-5 text-lg'
                     onClick={() => swiperRef.current && swiperRef.current.slideNext()} // Use the ref to call slidePrev
                     aria-label="Previous Slide"
                 >
