@@ -12,19 +12,19 @@ export default function BooksPreView() {
     const preViewToBasket = useCallback((itemId, itemTitle) => {
         const { bookBasket, setBookBasket } = contextData;
         const isInBasket = bookBasket.some(item => item.title === itemTitle);
-    
+
         if (isInBasket) {
-          const updatedCart = bookBasket.map(item =>
-            item.title === itemTitle ? { ...item, quantity: item.quantity + 1 } : item
-          );
-          setBookBasket(updatedCart);
+            const updatedCart = bookBasket.map(item =>
+                item.title === itemTitle ? { ...item, quantity: item.quantity + 1 } : item
+            );
+            setBookBasket(updatedCart);
         } else {
-          const findItem = allBooksDetails.find(item => item.id === itemId);
-          const { title, img, price } = findItem;
-          const newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1 };
-          setBookBasket(prev => [newItemToBasket, ...prev]);
+            const findItem = allBooksDetails.find(item => item.id === itemId);
+            const { title, img, price } = findItem;
+            const newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1 };
+            setBookBasket(prev => [newItemToBasket, ...prev]);
         }
-      }, [contextData]);
+    }, [contextData]);
 
     return (
         <div className="mt-20 mb-20">
@@ -40,12 +40,12 @@ export default function BooksPreView() {
                 </div>
                 <div className="flex flex-col items-center mb-40 gap-16 flex-wrap md:flex-row justify-center">
                     {books.map(item => (
-                        <BookCard onItem={()=>preViewToBasket(item.id,item.title)} isTrue={false} key={item.id} {...item} />
+                        <BookCard onItem={() => preViewToBasket(item.id, item.title)} isTrue={false} key={item.id} {...item} />
                     ))}
                 </div>
                 <NavLink to={"books"} className={({ isActive }) => (isActive ? "" : "")}>
-                    <button onClick={()=> window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} className="bg-current flex py-4 px-6 rounded-full text-white cursor-pointer hover:bg-black transition-all">
-                    مشاهده کل مجموعه
+                    <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} className="bg-current flex py-4 px-6 rounded-full text-white cursor-pointer hover:bg-black transition-all">
+                        مشاهده کل مجموعه
                     </button>
                 </NavLink>
             </div>
