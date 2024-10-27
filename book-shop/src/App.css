@@ -26,32 +26,32 @@
 
 @font-face {
     font-family: yekan;
-    src: url(/public/fonts/Yekan.ttf);
+    src: url(/fonts/Yekan.ttf);
 }
 
 @font-face {
     font-family: word;
-    src: url(/public/fonts/bbd8448e056821340fd2bbf64eba980a.ttf);
+    src: url(/fonts/bbd8448e056821340fd2bbf64eba980a.ttf);
 }
 
 @font-face {
     font-family: wordBold;
-    src: url(/public/fonts/KALAMEHBOLD.TTF);
+    src: url(/fonts/KALAMEHBOLD.TTF);
 }
 
 @font-face {
     font-family: regular;
-    src: url(/public/fonts/KalamehRegular.ttf);
+    src: url(/fonts/KalamehRegular.ttf);
 }
 
 @font-face {
     font-family: bold;
-    src: url(/public/fonts/bold.ttf);
+    src: url(/fonts/bold.ttf);
 }
 
 @font-face {
     font-family: light;
-    src: url(/public/fonts/IRANSansWebight.ttf);
+    src: url(/fonts/IRANSansWebight.ttf);
 }
 
 .word {
