@@ -450,3 +450,9 @@
     transition: all 0.3s ease-in;
     visibility: visible !important;
 }
+
+.NotFound {
+    background-image: linear-gradient(#758bfd 0%, transparent 75%);
+    background-clip: text;
+    color: transparent !important;
+}

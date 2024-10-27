@@ -4,6 +4,7 @@ import UserBasket from "./Pages/UserBasket/UserBasket";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import EachBookPage from "./Pages/EachBookPage/EachBookPage";
 import CollectionSubPage from "./Pages/CollectionSubPage/CollectionSubPage";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 const router = [
     { path: "/", element: <Home /> },
@@ -12,6 +13,7 @@ const router = [
     { path: "/Basket", element: <UserBasket /> },
     { path: "/Books/:id", element: <EachBookPage /> },
     { path: "/Collection/:category", element: <CollectionSubPage /> },
+    { path: "*", element: <NotFoundPage /> },
 ]
 
 export default router
