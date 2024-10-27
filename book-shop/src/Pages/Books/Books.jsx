@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState, useMemo, useCallback } from "react";
 import BookCard from "../../Components/BookCard/BookCard";
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
@@ -42,7 +41,7 @@ export default function Books() {
       const findItem = allBooksDetails.find(item => item.id === itemId);
       if (findItem) {
         const { title, img, price } = findItem;
-        const newItemToBasket = { id: bookBasket.length + 1, title, img, price, quantity: 1 };
+        const newItemToBasket = { id: bookBasket.length, title, img, price, quantity: 1 };
         setBookBasket(prev => [newItemToBasket, ...prev]);
       }
     }
