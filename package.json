@@ -1,12 +1,16 @@
 {
+  "name": "book-shop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Hamedpyn.github.io/BookShop",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "flowbite-react": "^0.10.2",
