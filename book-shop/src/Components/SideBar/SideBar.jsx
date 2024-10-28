@@ -61,7 +61,7 @@ export default function SideBar(sideBarObject) {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
-                                onClick={()=>sideBarObject.setIsTrue(false)}
+                                onClick={() => sideBarObject.setIsTrue(false)}
                             >
                                 صفحه اصلی
                             </NavLink>
@@ -70,7 +70,7 @@ export default function SideBar(sideBarObject) {
                             <NavLink
                                 to="/Books"
                                 className={({ isActive }) => (isActive ? "active" : "link-67")}
-                                onClick={()=>sideBarObject.setIsTrue(false)}
+                                onClick={() => sideBarObject.setIsTrue(false)}
                             >
                                 کتاب ها
                             </NavLink>
@@ -83,7 +83,7 @@ export default function SideBar(sideBarObject) {
                         </li>
                         <SideBarSubMenu isSubMenuOn={sideBarObject.isCollectionMenuOn}>
                             {subMenuDetails.map(item => (
-                                <a key={item.id} className="flex justify-center items-center flex-col opacity-70 mb-10 transition-all hover:opacity-100" href="#">
+                                <a key={item.id} className="flex justify-center items-center flex-col opacity-70 mb-10 transition-all hover:opacity-100">
                                     <img className="w-4/5 sm:w-3/4 rounded" src={item.img} alt={item.img} />
                                     <Button className={`mt-[-20px] ${item.btnColor && "bg-[#b2824c]"}`} color={item.btnType} pill>{item.title}</Button>
                                 </a>
@@ -170,26 +170,32 @@ export default function SideBar(sideBarObject) {
 
                         <SideBarSubMenu isSubMenuOn={sideBarObject.isPagesMenuOn}>
                             <div className="flex flex-col mt-[-25px] mb-5">
-                                <span className={`collectionSubMenu subMenu`} >
-                                    <span>-وبلاگ</span>
-                                </span>
-                                <span className={`collectionSubMenu subMenu`} >
-                                    <span>-درباره ما</span>
-                                </span>
-                                <span className={`collectionSubMenu subMenu`} >
-                                    <span>-سوالات متداول</span>
-                                </span>
+                                <Link
+                                    onClick={() => sideBarObject.setIsTrue(false)}
+                                    to={'*'} className={`collectionSubMenu subMenu`} >
+                                    <span className="light">-وبلاگ</span>
+                                </Link>
+                                <Link
+                                    onClick={() => sideBarObject.setIsTrue(false)}
+                                    to={'*'} className={`collectionSubMenu subMenu`} >
+                                    <span className="light">-درباره ما</span>
+                                </Link>
+                                <Link
+                                    onClick={() => sideBarObject.setIsTrue(false)}
+                                    to={'*'} className={`collectionSubMenu subMenu`} >
+                                    <span className="light">-سوالات متداول</span>
+                                </Link>
                                 <span onClick={() => sideBarObject.setSubMenu(prev => !prev)} className={`collectionSubMenu subMenu ${sideBarObject.subMenu && "opacity-100"}`} >
-                                    <span>-منوی کشویی</span>
+                                    <span className="light">-منوی کشویی</span>
                                     <FaChevronDown className={`transition-all ${sideBarObject.subMenu ? "transform rotate-180" : ""}`} />
                                 </span>
                                 <SideBarSubMenu isSubMenuOn={sideBarObject.subMenu}>
                                     <div className={`flex flex-col mt-[-10px]`}>
-                                        <span className="collectionSubMenu px-11"
+                                        <span className="collectionSubMenu px-11 light"
                                         >-زیر منو 1</span>
-                                        <span className="collectionSubMenu px-11"
+                                        <span className="collectionSubMenu px-11 light"
                                         >-زیر منو 2</span>
-                                        <span className="collectionSubMenu px-11"
+                                        <span className="collectionSubMenu px-11 light"
                                         >-زیر منو 3</span>
 
                                     </div>

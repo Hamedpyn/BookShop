@@ -7,7 +7,7 @@ import { Button } from "flowbite-react";
 export default function NavBar() {
   const [subMenuDetails,] = useState(subMenuDetail)
   return (
-    <ul className="flex navbar-menu h-full items-center">
+    <ul className="flex gap-1 navbar-menu h-full items-center">
       <li className="relative py-[62px] group underEffect">
         <NavLink to={"/"} className={({ isActive }) => (isActive ? "isActive border-l-2 h-4 flex items-center border-[#f6f7f9] px-2" : "cursor-pointer group-hover:text-current transition-all border-l-2 h-4 flex items-center border-[#f6f7f9] px-2")}>
           صفحه اصلی
@@ -26,9 +26,9 @@ export default function NavBar() {
           </span>
         </a>
 
-        <ul className={`transition-opacity ease-out absolute top-[130px] right-[-200px] group-hover:visible group-hover:opacity-100 invisible opacity-0  w-[800px] xl:h-[300px] xl:w-[1000px] h-[200px] xl:right-[-300px] bg-white flex items-center justify-center z-50`}>
+        <ul className={`transition-opacity ease-out absolute top-[130px] right-[-200px] group-hover:visible group-hover:opacity-100 invisible opacity-0  w-[800px] lg:h-[250px] xl:h-[300px] xl:w-[1000px] h-[200px] xl:right-[-300px] bg-white flex items-center justify-center z-50`}>
           {subMenuDetails.map(item => (
-            <a key={item.id} className=" flex flex-col items-center transition-all" href="#">
+            <a key={item.id} className=" flex flex-col items-center transition-all">
               <img className="w-[200px] xl:w-[300px] rounded" src={item.img} alt={item.img} />
               <Button className={`mt-[-20px] ${item.btnColor && "bg-[#b2824c]"}`} color={item.btnType} pill>{item.title}</Button>
             </a>
@@ -92,18 +92,18 @@ export default function NavBar() {
           </span>
         </a>
         <ul className={`transition-opacity ease-out absolute top-[135px] right-0 w-[200px] h-[150px] group-hover:visible group-hover:opacity-100 invisible opacity-0 cursor-auto rounded-md bg-current z-50 text-sm gap-2 flex pt-5 flex-col text-white delay-100 duration-200 px-10`}>
-          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">وبلاگ</li>
-          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">درباره ما</li>
-          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">سوالات متداول</li>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">وبلاگ</li>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">درباره ما</li>
+          <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">سوالات متداول</li>
           <li className="cursor-pointer flex items-center opacity-70 hover:opacity-100 relative transition-all w-[200px] underMenuCollect gap-4">
-            <span>منوی کشویی</span>
+            <span className="light">منوی کشویی</span>
             <span>
               <FaChevronDown className="transition-all underCheck" />
             </span>
             <ul className={`transition-opacity ease-out absolute top-0 right-[160px] w-[150px] h-[110px] cursor-auto rounded-md bg-current text-sm gap-2 flex pt-5 flex-col text-white delay-100 invisible opacity-0 subMenuCollect duration-200 px-5`}>
-              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو 1</li>
-              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو 2</li>
-              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all">زیر منو3</li>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">زیر منو 1</li>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">زیر منو 2</li>
+              <li className="cursor-pointer opacity-70 hover:opacity-100 transition-all light">زیر منو3</li>
             </ul>
           </li>
         </ul>
