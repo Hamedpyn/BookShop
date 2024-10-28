@@ -38,7 +38,7 @@ const footerSubMenu = [
     { id: 1, title: "منو سفارشی", firstSubMenu: "صفحه اصلی", secSubMenu: 'کتاب ها', thirdSubMenu: "محموعه", forthSubMenu: "دسته بندی" },
     { id: 2, title: "پشتیبانی", firstSubMenu: "سوالات متداول", secSubMenu: 'قوانین', thirdSubMenu: "سیاست ها و قوانین", forthSubMenu: "گزارش" },
     { id: 3, title: "درباره ما", firstSubMenu: "درباره ما", secSubMenu: 'شرکا', thirdSubMenu: "چشم انداز", forthSubMenu: "تماس با ما" },
-]/BookShop
+]
 
 const allBooksDetails = [
     { status:"موجود",code:"SKU_12",category:"economy",id: 1, title: "5 سال", img: "/BookShop/Images/book-9.jpg", price: 69 },
