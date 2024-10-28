@@ -54,7 +54,7 @@ export default function SideBar(sideBarObject) {
                 <div className="mx-2 mt-5">
                     <div className="flex flex-wrap justify-between flex-row-reverse rounded p-3 bg-white">
                         <IoMdClose onClick={sideBarObject.toggleMenu} className="menuButton border transition-all hover:scale-110" />
-                        <img src="/Images/logo.png" className="w-[120px]" alt="Logo" />
+                        <img src="Images/logo.png" className="w-[120px]" alt="Logo" />
                     </div>
                     <ul className="text-white bold flex flex-col mt-7 mb-20">
                         <li className="mr-[-1px]">

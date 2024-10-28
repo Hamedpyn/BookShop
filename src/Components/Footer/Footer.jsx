@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center h-[1100px] md:h-[600px] w-full max-w-[1380px] lg:rounded-[40px] bg-[#F1F2F6]">
                 <div className="flex flex-col w-11/12 md:w-[220px] items-center md:items-start leading-6 gap-7 mt-12 md:mt-6">
-                    <img src="/Images/logo-book-shop.png" alt="Logo" />
+                    <img src="Images/logo-book-shop.png" alt="Logo" />
                     <p className="text-[#575757] tracking-widest md:-tracking-normal md:text-start text-center text-[16px] light">وقتی صبح ها کسی از خواب بیدارتون نمیکنه و شبها کسی منتظرتون نیست،و هر کاری که دوست دارین میتونین انجام بدین،اسمش آزادیه یا تنهایی؟</p>
                     <span className="text-current">چارلز بوکوفسکی</span>
                 </div>
