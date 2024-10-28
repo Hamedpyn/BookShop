@@ -36,13 +36,7 @@ function App() {
   let router = useRoutes(routes)
   return (
     <UserBasketContext.Provider value={{ bookBasket, setBookBasket, isModal, setIsModal, openModal, setOpenModal }}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: false }}>
         <Header />
-      </motion.div>
       {router}
       <div className="">
         <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
