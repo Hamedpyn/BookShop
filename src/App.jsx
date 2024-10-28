@@ -10,16 +10,19 @@ import { useEffect, useRef, useState } from 'react';
 import { FaChevronUp } from "react-icons/fa";
 import { LoginModal } from './Components/LoginModal/LoginModal';
 import { motion } from "framer-motion";
+import { Spinner } from "flowbite-react";
 
 function App() {
   const [bookBasket, setBookBasket] = useState([])
   const [isModal, setIsModal] = useState(false)
   const [openModal, setOpenModal] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   // Load basket from local storage on component mount
   useEffect(() => {
     const savedBasket = JSON.parse(localStorage.getItem('books')) || [];
     setBookBasket(savedBasket);
+    setLoading(false)
   }, []);
 
   useEffect(() => {
@@ -36,24 +39,32 @@ function App() {
   let router = useRoutes(routes)
   return (
     <UserBasketContext.Provider value={{ bookBasket, setBookBasket, isModal, setIsModal, openModal, setOpenModal }}>
-        <Header />
-      {router}
-      <div className="">
-        <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
-          <FaChevronUp className='text-xl' />
-        </button>
+      {loading ? (
+        <div className="flex items-center justify-center min-h-screen">
+        <Spinner color='warning' size='xl' aria-label="Center-aligned spinner example" />
       </div>
-      {openModal && (
-        <LoginModal />
+      ) : (
+        <>
+          <Header />
+          {router}
+          <div className="">
+            <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
+              <FaChevronUp className='text-xl' />
+            </button>
+          </div>
+          {openModal && (
+            <LoginModal />
+          )}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}>
+            <Footer />
+          </motion.div>
+        </>
       )}
-      
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: false }}>
-        <Footer />
-      </motion.div>
     </UserBasketContext.Provider>
   )
 }
