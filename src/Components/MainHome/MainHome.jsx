@@ -5,7 +5,7 @@ export default function MainHome() {
     <div className="h-[780px] sm:h-[760px] lg:h-[470px] overflow-hidden xl:h-[660px] max-w-[1450px] md:h-[860px] lg:rounded-bl-[100px] bg-[#f8f8fa]">
       <div className="flex flex-col items-center pt-5 px-5 gap-14 lg:flex-row-reverse md:justify-center lg:justify-end lg:px-10 xl:mt-10 mainHomePage lg:pt-0">
         <div className="mainHome justify-center overflow-hidden relative flex md:basis-1/2">
-          <img className="w-[400px] md:w-[500px] z-10 xl:w-[800px]" src="/Images/layer-slider-model.png" alt="Model" />
+          <img className="w-[400px] md:w-[500px] z-10 xl:w-[800px]" src="Images/layer-slider-model.png" alt="Model" />
         </div>
         <div className="flex flex-col md:items-start items-center basis1/2 gap-7 xl:gap-16 xl:mb-[150px]">
           <div className="text-4xl text-center lg:text-start w-[100%] lg:w-[450px] tracking-wide lg:text-5xl xl:text-[52px] lg:leading-tight">
