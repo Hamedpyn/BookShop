@@ -63,7 +63,7 @@ function Header() {
                     </div>
                     <div className="menuBasis justify-center md:justify-start lg:basis-auto lg:justify-start lg:bg-white lg:h-[140px] pr-5 xl:pr-12 items-center navbar-logo z-50 lg:border-[0.5px] border-[rgba(149, 157, 165, 0.2)] lg:border-l-0"
                     >
-                        <img src="/Images/logo.png" className="w-[120px] lg:h-[60px] md:w-[140px]" alt="Logo" />
+                        <img src="Images/logo.png" className="w-[120px] lg:h-[60px] md:w-[140px]" alt="Logo" />
                     </div>
                     <div className="hidden lg:flex bg-white h-[140px]  rounded-bl-[80px] w-[630px] xl:!pr-12 pr-5 items-center text-[#686868] navbar-space border-[rgba(149, 157, 165, 0.2)] border-[1px] border-r-0">
                         <NavBar />
