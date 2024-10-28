@@ -3,6 +3,7 @@ import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { motion } from "framer-motion";
 
 export default function NotFoundPage() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     return (
         <div>
             <div className="">

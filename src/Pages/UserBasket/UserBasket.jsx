@@ -9,6 +9,7 @@ import { PayUpModal } from '../../Components/PayUpModal/PayUpModal';
 import { motion } from 'framer-motion';
 
 export default function UserBasket() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
   const [isModal, setIsModal] = useState(false);
   const contextData = useContext(UserBasketContext);
