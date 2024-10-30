@@ -48,7 +48,7 @@ function App() {
           <Header />
           {router}
           <div className="">
-            <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
+            <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} ref={scrollRef} className='bg-current z-50 text-white hover:bg-black fixed right-[30px] bottom-[30px] w-[58px] opacity-0 invisible flex items-center justify-center transition-all h-[58px] rounded-full'>
               <FaChevronUp className='text-xl' />
             </button>
           </div>
