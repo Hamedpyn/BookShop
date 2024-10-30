@@ -7,6 +7,7 @@ import UserBasketContext from "../../Contexts/UserBasketContext";
 import { Alert } from "flowbite-react";
 
 export default function CollectionSubPage() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   let params = useParams()
   let findItems = allBooksDetails.find(item => item.category == params.category.toLowerCase())
   const { bookBasket, setBookBasket, isModal } = useContext(UserBasketContext);
@@ -44,17 +45,17 @@ export default function CollectionSubPage() {
               <div className="flex flex-col mt-20 items-center gap-16 flex-wrap md:flex-row justify-center">
                 <BookCard onItem={() => preViewToBasket(findItems.id, findItems.title)} isTrue={true} key={findItems.id} {...findItems} />
               </div>
-            <div className={`z-50 bold fixed top-[10px] right-[10px] transition-all ease-out duration-300 ${isModal ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}`}>
-              <Alert color="success" withBorderAccent>
-                <span className="font-medium">محصول مورد نظر شما با موفقیت به سبد خرید اضافه شد.</span>
-              </Alert>
+              <div className={`z-50 bold fixed top-[10px] right-[10px] transition-all ease-out duration-300 ${isModal ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}`}>
+                <Alert color="success" withBorderAccent>
+                  <span className="font-medium">محصول مورد نظر شما با موفقیت به سبد خرید اضافه شد.</span>
+                </Alert>
+              </div>
             </div>
-          </div>
+          </>
+        ) : (
+          <Navigate to={"*"} />
+        )
+      }
     </>
-  ) : (
-    <Navigate to={"*"} />
-  )
-}
-</>
   )
 }
