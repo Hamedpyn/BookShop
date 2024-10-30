@@ -76,7 +76,7 @@ export default function NavBar() {
               >-ادبیات داستانی</Link>
               <Link to={"/Collection/Economy"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
               >-اقتصاد</Link>
-              <Link to={"/Collection/Classic"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
+              <Link to={"/Collection/Classical"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
               >-کلاسیک</Link>
               <Link to={"/Collection/Biography"} className="opacity-60 hover:opacity-100 pr-3 text-sm light"
               >-بیوگرافی</Link>
